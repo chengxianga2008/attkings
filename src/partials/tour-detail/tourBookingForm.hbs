@@ -1,0 +1,126 @@
+<form method="post" action="tour-detail.html" class="booking-form form visible-md visible-lg container-fluid">
+
+	<div class="form-group">
+		<div class="col-xs-12">
+			<h4 class="booking-form__title">Duration <span class="booking-form__title-sub">4 days</span></h4>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-xs-12">
+			<input type="hidden" id="departure-dates" class="booking-form__date-input">
+			<p class="booking-form__date-picker form__date-picker"><i class="fa fa-calendar" aria-hidden="true"></i> Departure Dates</p>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-xs-12">
+			<div class="form__select">
+				<select id="hotel-type" name="hotel-type" class="form-control form__selecter">
+				<option value="" name>
+					Hotel type options
+				</option>
+				<option value="">
+					Option 1
+				</option>
+				<option value="">
+					Option 2
+				</option>
+				<option value="">
+					Option 3
+				</option>
+				<option value="">
+					Option 4
+				</option>
+			</select>
+			</div>
+		</div>
+	</div><!-- form-group -->
+
+	<div class="form-group">
+
+		<div class="col-xs-4 form__left">
+			<input type="input" class="form-control form__input" placeholder="1 Room">
+		</div>
+
+		<div class="col-xs-8 form__right">
+			<div class="form__select">
+				<select id="room-capacity" name="room-capacity form__select" class="form-control form__selecter">
+					<option value="" name>Room capacity</option>
+					<option value="">1 Room</option>
+					<option value="">2 Rooms</option>
+					<option value="">3 Rooms</option>
+				</select>
+			</div>
+		</div>
+
+	</div><!-- form-group -->
+
+	<div class="form-group booking-form__guest--0">
+
+		<div class="col-xs-8 form__left">
+			<div class="form__select">
+				<select id="room-capacity" name="room-capacity" class="form-control form__selecter">
+					<option value="" selected>Adult</option>
+					<option value="">Child</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="col-xs-4 form__right">
+
+			<a href="#" class="form__counter-subtract">-</a><input type="text" name="number-adults" value="1"  class="form-control form__counter"><a  href="#" name="form-add" class="form__counter-add">+</a>
+
+		</div>
+
+	</div><!-- form-group -->
+
+	<div class="form-group booking-form__guest--1 hidden">
+
+		<div class="col-xs-8 form__left">
+			<div class="form__select">
+				<select id="room-capacity" name="room-capacity" class="form-control form__selecter">
+					<option value="">Adult</option>
+					<option value="" selected>Child</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="col-xs-4 form__right">
+
+			<a href="#" class="form__counter-subtract">-</a><input type="text" name="number-adults" value="1"  class="form-control form__counter"><a href="#" class="form__counter-add">+</a>
+
+		</div>
+
+	</div><!-- form-group -->
+
+	<div class="form-group">
+		<div class="col-xs-12">
+			<p><a href="#" class="booking-form__add-guest">+ Add Guest</a></p>
+		</div>
+	</div><!-- form-group -->
+
+	<div class="form-group hidden booking-form__optional-extras">
+		<div class="col-xs-12">
+			<h5 class="tour-detail__title">Select optional experiences</h5>
+			<ul class="booking-form__optional-extra-list">
+			</ul>
+		</div>
+	</div><!-- form-group -->
+
+	<div class="form-group booking-form__total">
+		<div class="col-xs-12">
+			<h3 class="booking-form__total-title">
+				<span class="booking-form__total-title-sub">Total Price</span>
+				<strong class="booking-form__total-title-text">AU$1379</strong>
+				<span class="booking-form__total-title-sub">Includes GST</span>
+			</h3>
+		</div>
+	</div><!-- form-group -->
+
+	<div class="form-group">
+		<a href="#" class="btn btn--red tour-tabs__btn col-lg-12 text-center">BOOK NOW</a>
+		<a href="#" class="btn btn--red-outline col-lg-12 tour-tabs__btn text-center">REQUEST A QUOTE</a>
+	</div><!-- form-group -->
+
+</form method="" action="tour-detail.html">

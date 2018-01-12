@@ -1,0 +1,226 @@
+.tour-detail {
+  margin-bottom: 2rem;
+
+  &__dates {
+    &-title {
+      padding: 0;
+      margin: 0 0 -2.7rem;
+      font-size: 1.5rem;
+      color: $gray40;
+    }
+
+    &-slider {
+      @include breakpoint($sm-up) {
+        width: 100%;
+        maring-left: 0;
+      }
+      width: 100vw;
+      overflow-x: scroll;
+      padding: 1rem 0;
+      margin-left: -15px;
+    }
+
+    &-row {
+      width: max-content;
+      width: -moz-max-content;
+      display: flex;
+      position: relative;
+      margin: 0 auto;
+
+      &:after {
+        width: 100%;
+        height: 2px;
+        display: block;
+        content: " ";
+        background-color: $gray20;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-1px);
+        z-index: -1;
+      }
+    }
+  } //.__dates
+
+  &__date {
+    display: block;
+    color: $red;
+    margin: 0 3rem;
+    padding: 0 1rem;
+    background-color: $white;
+    text-transform: uppercase;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  } //.__date
+
+  &__title--sub {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &__nav-tabs {
+    @include breakpoint($lrg-up) {
+      margin-bottom: 20px;
+    }
+    display: flex;
+    justify-content: space-between;
+  	margin-bottom: 30px;
+  	line-height: 1;
+  	border: 1px solid $gray20;
+  	@include border-radius(5px);
+    overflow: hidden;
+  }
+
+  &__nav-tab {
+    width: calc(100% / 6);
+
+    &:last-child &-link.page-link{
+      &:after {
+        display: none;
+      }
+    }
+
+    &-link.page-link {
+      @include breakpoint($lrg-up) {
+        font-size: 1.2rem;
+      }
+
+      font-size: 1rem;
+      min-height: 5rem;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: $gray30;
+      position: relative;
+      justify-content: center;
+
+      &:after {
+        width: 1px;
+        height: 3.6rem;
+        display: block;
+        background-color: $gray20;
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:hover {
+        color: $red;
+        background-color: $white;
+      }
+
+    }
+
+    &.active {
+      border-bottom: 1px solid $red;
+      background-color: $white;
+    }
+
+    &.active &-link {
+      color: $red;
+      border: 0;
+      background-color: $white;
+
+      &:hover,
+      &:visited,
+      &:focus {
+        color: $red;
+        background-color: $white;
+      }
+    }
+  }
+
+  &__content {
+
+    &-title {
+
+      &--h2 {
+        font-size: 2.8rem;
+        color: $gray60;
+        margin: 0 0 4.6rem;
+      }
+
+      &--h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $gray70;
+      }
+    }
+  }
+
+  &__accordion {
+    @include breakpoint($mid-up) {
+      width: calc(100% - 30px);
+      margin: 0 auto;
+    }
+
+    > .row {
+      @include breakpoint($mid-up) {
+        border-top: 0;
+      }
+      border-top: 1px solid $gray10;
+    }
+
+    &-heading {
+      @include breakpoint($mid-up) {
+        display: none;
+      }
+    }
+
+    .panel {
+      @include breakpoint($mid-up) {
+        border-top: 0;
+      }
+    }
+  }
+
+  &__right-col {
+
+  }
+
+  &__customer-support {
+    margin: 15px 0;
+    border: 1px solid $gray20;
+    padding: 15px;
+    border-radius: 10px;
+
+    .social-icons {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__booking-form {
+    border: 1px solid $gray20;
+    border-radius: 10px;
+    margin: 47px 0 0;
+
+    > .container-fluid {
+      padding: 0 15px;
+    }
+  }
+
+  &__booking-form &__title--h3, &__booking-form &__p {
+    padding: 0 15px;
+  }
+
+  &__booking-form &__title {
+
+  }
+
+} //.tour-detial
+
+.optional-experience {
+  @include breakpoint($lrg-up) {
+    padding: 0;
+  }
+  padding: 15px;
+}

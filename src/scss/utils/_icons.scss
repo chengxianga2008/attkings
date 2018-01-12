@@ -1,0 +1,29 @@
+.icn {
+  width: 100%;
+  display: block;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &-arrow {
+    width: 30px;
+    height: 57px;
+    background-image: url(../images/svg/cs_arrow.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+
+    &--left {
+      transform: translateX(-50%) translateY(-20px) rotateZ(180deg);
+    }
+  }
+
+  &__car {
+    background-image: url("../images/svg/icon_car.svg");
+  }
+
+  &__star-plus {
+    background-image: url("../images/svg/icon_star.svg");
+  }
+}

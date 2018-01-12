@@ -1,0 +1,56 @@
+.highlights {
+  @include breakpoint($mid-up) {
+    padding-top: 0;
+  }
+  color:$gray50;
+  font-size: 12px;
+  padding-top: 2rem;
+
+  &__day-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__day-item {
+    @include breakpoint($mid-up) {
+      list-style-type: none;
+      margin-bottom: 1.36rem;
+      font-size: 1.4rem;
+    }
+    list-style-type: none;
+    margin-bottom: 0.25rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__timing{
+    @include breakpoint($mid-up) {
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+	  padding: 1.5rem 0;
+  }
+
+  &__right{
+    @include breakpoint($mid-up) {
+      padding-right: 0;
+      padding-top: 0;
+    }
+	  padding: 20px 15px;
+  }
+
+  &__left {
+    @include breakpoint($mid-up) {
+      padding-left: 0;
+    }
+    padding: 0 15px;
+  }
+
+  &__img {
+	  width: 100%;
+	  @include border-radius(10px);
+  }
+}

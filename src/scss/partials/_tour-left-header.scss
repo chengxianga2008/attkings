@@ -1,0 +1,192 @@
+.tour-detail {
+  &__header {
+    @include breakpoint($mid-up) {
+      padding-bottom: 0;
+    }
+    position: relative;
+    padding-bottom: 5.4rem;
+  }
+
+  &__title {
+    &--h2 {
+      @include breakpoint($mid-up) {
+        text-align: left;
+        font-weight: 600;
+        margin: 4.5rem 0 3.8rem;
+      }
+      text-align: center;
+      font-size: 3rem;
+      line-height: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    &--h3 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin: 2rem 0 0.5rem;
+      padding: 0;
+    }
+
+    &--h4 {
+      @include breakpoint($mid-up) {
+        text-align: left;
+        font-size: 1.8rem;
+        margin: 3.2rem 0;
+      }
+      font-size: 1.3rem;
+      text-align: center;
+      line-height: 1.4;
+      letter-spacing: -0.06rem;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__header-prices {
+    padding-top: 0px;
+    padding-bottom: 1.3rem;
+  }
+
+  &__price {
+    text-align: center;
+    border-right: 2px solid $gray10;
+
+    &:last-of-type {
+      border: 0;
+    }
+
+    &-title {
+      @include breakpoint($lrg-up) {
+        font-size: 3rem;
+      }
+      @include breakpoint($mid-up) {
+        font-size: 2.4rem;
+      }
+      font-weight: 600;
+      font-size: 3rem;
+      margin: 0;
+
+      &-sub {
+        @include breakpoint($lrg-up) {
+          font-size: 1.5rem;
+        }
+        @include breakpoint($mid-up) {
+          font-size: 1rem;
+        }
+        font-size: 1.5rem;
+        position: relative;
+        margin: 0;
+      }
+    }
+
+    &-row {
+      margin-top: 1.3rem;
+      margin-bottom: 1.3rem;
+    }
+
+    &-info {
+      @include transition(width 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      opacity: 0;
+      width: 100%;
+      padding: 0.5rem;
+      background-color: #FFF;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      border: 1px solid $gray20;
+      box-shadow: 5px 5px 10px rgba($black, 0.4);
+      z-index: 50;
+      font-size: 1rem;
+
+      &:before {
+        width: 0;
+        height: 0;
+        display: block;
+        content: " ";
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 8px solid #FFF;
+        position: absolute;
+        bottom: -8px;
+        right: 22%;
+      }
+
+      &-link {
+        @include breakpoint($lrg-up) {
+          width: 2rem;
+          height: 2rem;
+        }
+        @include breakpoint($mid-up) {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        cursor: pointer;
+        border: 1px solid $red;
+        border-radius: 100%;
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        color: $red;
+
+        &:hover + .tour-detail__price-info {
+          opacity: 1;
+          z-index: 150;
+        }
+      }
+    }
+  }
+
+  &__heart {
+    @include breakpoint($mid-up) {
+      font-size: 3rem;
+      display: block;
+    }
+  }
+
+  &__btn {
+    @include breakpoint($mid-up) {
+      display: none;
+    }
+    width: 100%;
+    padding: 1.65rem 0;
+    font-size: 1.3rem;
+    margin: 2rem 0;
+    z-index: 100;
+
+    &--like {
+      @include breakpoint($mid-up) {
+        width: 60px;
+        height: 60px;
+        display: block;
+        bottom: auto;
+        top: 0;
+        right: 0;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        text-transform: none;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      margin-bottom: 0;
+      width: 100%;
+      display: block;
+      color: $gray40;
+      font-weight: 100;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 5px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $gray40;
+      position: absolute;
+      bottom: 0;
+
+      &:visited {
+        color: $gray40;
+      }
+    }
+  }
+}

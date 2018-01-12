@@ -1,0 +1,93 @@
+// Carousel
+//
+// A bootstrap carousel with a little veriation.
+// The important thing to note is the ID name "UNIQUE_NAME"
+// This will need to be unique if there are multiple instances on the same page.
+//
+// Markup: carousel.hbs
+//
+//
+// Style guide: partials.carousel
+
+.header-carousel {
+
+  &__video {
+    width: 100%;
+  }
+
+  &__iframe {
+    width: 100vw;
+    height: 56vw;
+    display: block;
+  }
+
+  &__caption {
+    @include breakpoint($mid-up) {
+    }
+    bottom: 50%;
+    transform: translateY(50%);
+    padding: 0;
+
+    &--video {
+      @include breakpoint($mid-up) {
+        top: 145px;
+      }
+      top: 20px;
+      bottom: auto;
+      text-align: center;
+      transform: translateY(0);
+
+      .carousel__title {
+
+      }
+    }
+  }
+
+  &__title {
+    @include breakpoint($sm-up){
+      font-size: 3rem;
+    }
+    @include breakpoint($lrg-up) {
+      font-size: 5rem;
+    }
+    margin: 0;
+    font-weight: 100;
+    font-size: 1.7rem;
+  }
+
+  .fa {
+    @include breakpoint($sm-up){
+      opacity: 1;
+    }
+    top: 50%;
+    position: absolute;
+    margin-top: -2.75rem;
+    font-size: 5rem;
+    opacity: 0;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  .carousel-indicators {
+    @include breakpoint($mid-up) {
+      bottom: 110px;
+    }
+    bottom: 7px;
+
+    li {
+      width: 40px;
+      height: 3px;
+      border-radius: 0;
+      border: 0;
+      background-color: rgba($white, 0.7);
+      margin-top: 0;
+      margin-bottom: 0;
+
+      &.active {
+        background-color: $white;
+      }
+    }
+  }
+}

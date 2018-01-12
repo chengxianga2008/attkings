@@ -1,0 +1,210 @@
+#traveler-experience {
+	// todo create color variable
+	background-color: #FAF4F1;
+	padding-bottom: 2rem;
+	position: relative;
+
+	&:before {
+		background-image: url("../images/hp_bo_top.png");
+		width: 1920px;
+		height: 137px;
+		display: block;
+		content: "";
+		position: absolute;
+		top: -136px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+
+	&:after {
+		background-image: url("../images/hp_bo_bottom.png");
+		width: 1920px;
+		height: 131px;
+		display: block;
+		content: "";
+		position: absolute;
+		bottom: -131px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 0;
+
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+}
+
+.traveler-experience {
+	padding: 0;
+	margin: 0;
+	background-color: #FAF4F1;
+
+	.carousel-inner {
+		overflow: visible;
+	}
+
+	&__title {
+		@include breakpoint($mid-up){
+			font-size: 3.6rem;
+			padding-top: 2rem;
+			margin-bottom: 1em;
+		}
+		text-align: center;
+		font-size: 2.8rem;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	&__wrap {
+		@include breakpoint($mid-up){
+			display: flex;
+			justify-content: space-around;
+		}
+		width: 90%;
+		max-width: 590px;
+		margin: 0 auto;
+		display: block;
+	}
+
+	&__image {
+		@include breakpoint($mid-up){
+			width: 120px;
+			height: 120px;
+			margin: 0 3rem 0 0;
+		}
+
+		width: 85px;
+		height: 85px;
+		overflow: hidden;
+		margin: 20px auto;
+		border-radius: 100%;
+		position: relative;
+
+		&-img {
+			width: auto;
+			height: 100%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+	}
+
+	&__caption {
+		@include breakpoint($mid-up){
+			width: calc(100% - (85px + 3rem));
+		}
+	}
+
+	&__p {
+		line-height: 1.4;
+		font-weight: 300;
+		margin-bottom: 3rem;
+		position: relative;
+		text-align: left;
+		max-width: 450px;
+		margin: 0 auto;
+
+		&--quotes {
+			@include breakpoint($mid-up){
+				text-align: left;
+			}
+			text-align: center;
+
+			&:before, &:after {
+				@include breakpoint($mid-up){
+					width: 60px;
+					height: 60px;
+				}
+				width: 48px;
+				height: 48px;
+				display: block;
+				content: "";
+				position: absolute;
+				background-image: url("../images/svg/hp_quotes.svg");
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				z-index: -1;
+			}
+
+			&:before {
+				@include breakpoint($mid-up){
+					top: -25px;
+					left: -3rem;
+				}
+				z-index: -1;
+				top: -10px;
+				left: -1rem;
+			}
+
+			&:after {
+				bottom: -3rem;
+				right: 0;
+				transform: rotateZ(180deg);
+			}
+		}
+	}
+
+	&__meta {
+		margin-top: 2.5rem;
+	}
+
+	.carousel {
+		padding-bottom: 8rem;
+	}
+
+	&__carousel-indicators{
+		li{
+			border: 1px solid $gray50;
+			&.active{
+				background-color: $gray50;
+			}
+		}
+	}
+
+	&__carousel-control{
+		.carousel-control {
+			background: none;
+		}
+	}
+
+	&__carousel-icn {
+		@include breakpoint($sm-up) {
+			opacity: 1;
+		}
+		@include border-radius(100%);
+		height: 60px;
+		width: 60px;
+		padding: 2px;
+		display: block;
+		color:$gray10;
+		font-weight: normal;
+		text-shadow: none;
+		border: 1px solid $gray10;
+		background-image: url('../images/svg/cs_arrow--grey.svg');
+		background-size: 22% auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		opacity: 0;
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+
+		&--prev {
+
+		}
+
+		&--next {
+			transform: rotateZ(180deg) translateX(50%) translateY(50%);
+		}
+	}
+
+	&__btn {
+		max-width: 480px;
+		margin: 4rem auto 0;
+	}
+} //.traveler-experience

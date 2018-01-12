@@ -1,0 +1,122 @@
+.form {
+
+  &-group {
+    clear: both;
+  }
+
+  &__left {
+    padding-right: rem(7.5px);
+  }
+
+  &__right {
+    padding-left: rem(7.5px);
+  }
+
+  &__date-picker {
+    border-radius: 5px;
+    border: 1px solid $gray20;
+    padding: 1rem;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: $gray30;
+  }
+
+  &__select {
+    &:after {
+      width: 1rem;
+      height: 1rem;
+      display: block;
+      position: absolute;
+      color: $red;
+      content: "\f107";
+      font: normal normal normal 14px/1 FontAwesome;
+      right: 30px;
+      top: 33%;
+      transform: translateY(-50%);
+    }
+  }
+
+
+  &__selecter {
+    border-radius: 5px;
+    border: 1px solid $gray20;
+    height: 43px;
+    margin-bottom: 15px;
+    color: $gray30;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__input {
+    border-radius: 5px;
+    border: 1px solid $gray20;
+    height: 43px;
+    margin-bottom: 15px;
+    color: $gray30 !important;
+
+    &::-moz-placeholder {
+      color: $gray30;
+    }
+  }
+
+  &__counter {
+    width: 33%;
+    height: 35px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    marign-bottom: 15px;
+    display: block;
+    padding: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: $gray20;
+    box-shadow: none;
+    border-radius: 0;
+    text-align: center;
+    top: 4px;
+    color: $gray30;
+
+    &-subtract, &-add {
+      width: 33%;
+      height: 35px;
+      line-height: 31px;
+      text-align: center;
+      display: block;
+      margin-top:0;
+      top: 4px;
+      border: 1px solid $gray20;
+      position: absolute;
+      font-size: 2rem;
+      color: $gray30;
+
+      &:active, &:focus {
+        color: $gray30;
+      }
+      &:visited, &:hover {
+        color: $red;
+      }
+    }
+
+    &-subtract {
+      border-right: 0;
+      border-radius: 50% 0 0 50%;
+      left: 0;
+    }
+
+    &-add {
+      border-left: 0;
+      border-radius: 0 50% 50% 0;
+      right: 15px;
+
+    }
+
+
+
+  }
+
+
+}

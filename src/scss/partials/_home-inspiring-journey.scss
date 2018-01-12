@@ -1,0 +1,128 @@
+.inspiring-journey {
+
+	&__title {
+		font-weight: bold;
+		font-size: 2.6rem;
+
+	}
+
+	&__header {
+		padding: 5px 0 20px;
+
+		&-right-text {
+			padding-left: 40px;
+			display: inline-block;
+			color: $gray40;
+			font-size: 14px;
+		}
+
+		&-icon {
+			width: 28px;
+			height: 45px;
+			background-size: 100% auto;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 15px;
+			&--sb {
+				background-image: url('../images/svg/mm_inspiring-journeys.svg');;
+			}
+		}
+
+		&-btn {
+			border: 1px solid $red;
+			color: $red !important;
+			padding: 15px 30px;
+			.btn-icon {
+				position: relative;
+				font-size: 20px;
+				padding-left: 15px;
+			}
+		}
+
+		&-p {
+			padding-top: 20px;
+		}
+	} // .__header
+
+	&__slide {
+		width: 100%;
+
+		&-inner {
+			margin: 0;
+			display: flex;
+			justify-content: space-around;
+		}
+
+	} // .__slide
+
+	&__carousel {
+		position: relative;
+	}
+
+	&__caret-icons {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+
+		.carousel-control {
+			width: 5%;
+			opacity: 1;
+			z-index: 20;
+
+			&:hover {
+				.inspiring-journey__control-icon {
+					border: 1px solid rgba($white, 1);
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__control-icon {
+		@include border-radius(100%);
+		border: 1px solid rgba($white, 0.3);
+		width: 55px;
+		height: 55px;
+		background-color: rgba($black, 0.2);
+		display: block;
+		position: absolute;
+		background-image: url("../images/svg/cs_arrow.svg");
+		background-size: 35% auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		left: 50%;
+		top: 50%;
+		opacity: 0.8;
+
+
+		&--prev {
+			transform: translateX(-50%) translateY(-50%);
+		}
+
+		&--next {
+			transform: rotateZ(180deg) translateX(50%) translateY(50%);
+		}
+	}
+
+	&__indicators {
+		position: relative;
+		bottom: 0;
+		top: 10px;
+		li {
+			width: 8px;
+			height: 8px;
+			border-color: $gray50;
+			&.active {
+				width: 10px;
+				height: 10px;
+				border-color: $white;
+				background-color: $gray50;
+			}
+		}
+	}
+
+}

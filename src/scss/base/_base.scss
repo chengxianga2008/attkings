@@ -1,0 +1,33 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+
+  &:visited {
+    color: $black;
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+    outline: 0;
+  }
+  &:hover {
+    color: $red;
+  }
+
+}
+
+.main {
+  overflow: hidden;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}

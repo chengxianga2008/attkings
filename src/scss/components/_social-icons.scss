@@ -1,0 +1,164 @@
+$facebook: #002E98;
+$youtube: #FF0000;
+$twitter: #00A2FF;
+$linkedin: #005CB8;
+$instagram: #EE000E;
+$tripadvisor: #FFE188;
+
+.social-icons {
+  @include breakpoint($mid-up) {
+    width: 100%;
+    margin: 0;
+  }
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &__icon-link {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: block;
+    font-size: 2rem;
+
+    &:hover {
+      &:link, &:visited, &:active {
+        color: $white;
+      }
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      width: 100%;
+      height: 100%;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 50%;
+      content: "";
+      position: absolute;
+      display: block;
+      opacity: 0.4;
+    }
+
+    &--facebook {
+      color: $facebook;
+
+      &:link, &:visited, &:active {
+        color: $facebook;
+      }
+
+      &:before {
+        border-color: $facebook;
+        background-color: transparent;
+      }
+
+      &:hover {
+        &:before {
+          background-color: $facebook;
+        }
+      }
+    }
+
+    &--youtube {
+      color: $youtube;
+
+      &:link, &:visited, &:active {
+        color: $youtube;
+      }
+
+      &:before {
+        border-color: $youtube;
+      }
+
+      &:hover {
+        &:before {
+          background-color: $youtube;
+        }
+      }
+    }
+
+    &--twitter {
+      color: $twitter;
+
+      &:link, &:visited, &:active {
+        color: $twitter;
+      }
+
+      &:before {
+        border-color: $twitter;
+      }
+
+      &:hover {
+        &:before {
+          background-color: $twitter;
+        }
+      }
+    }
+
+    &--linkedin {
+      color: $linkedin;
+
+      &:link, &:visited, &:active {
+        color: $linkedin;
+      }
+
+      &:before {
+        border-color: $linkedin;
+      }
+
+      &:hover {
+        &:before {
+          background-color: $linkedin;
+        }
+      }
+    }
+
+    &--instagram {
+      color: $instagram;
+
+      &:link, &:visited, &:active {
+        color: $instagram;
+      }
+
+      &:before {
+        border-color: $instagram;
+      }
+
+      &:hover {
+        &:before {
+          background-color: $instagram;
+        }
+      }
+
+    }
+
+    &--tripadvisor {
+      color: $tripadvisor;
+
+      &:link, &:visited, &:active {
+        color: $tripadvisor;
+      }
+
+      &:before {
+        border-color: $black;
+      }
+
+      &:hover {
+        &:before {
+          background-color: $black;
+        }
+      }
+    }
+
+  }
+}

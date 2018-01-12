@@ -1,0 +1,181 @@
+.carousel-card {
+  @include border-radius(3px);
+  position: relative;
+  display: block;
+  width: 33.33%;
+  margin: 0 1%;
+  overflow: hidden;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    content: "";
+    opacity: 0.9;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  }
+
+  &__link {
+    @include transition(background 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 25;
+    background-color: rgba($black, 0);
+
+    &:hover {
+      background-color: rgba($black, 0.4);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    cursor: pointer;
+    z-index: 30;
+
+    .fa {
+      font-size: 2.8rem;
+      color: $white;
+
+      &-heart {
+        display: none;
+      }
+    }
+
+    &--checked {
+      .fa {
+        &-heart {
+          display: block;
+        }
+        &-heart-o {
+          display: none;
+        }
+      }
+    }
+
+    &-checkbox {
+      display: none;
+    }
+
+  } // .__icon
+
+  &__caption {
+    width: 100%;
+    text-align: left;
+    padding: 0 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: $white;
+    z-index: 15;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__left {
+    width: calc(80% - 2rem);
+    margin-bottom: 1rem;
+    border-right: 1px solid $white;
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__right {
+    width: 20%;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  &__h3 {
+    font-size: 1.65rem;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  &__h4 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: $gray20;
+  }
+
+  &__price {
+    font-size: 2.5rem;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: calc(50% + 0.5rem);
+    left: 0;
+    transform: translateY(-50%);
+    font-weight: 600;
+
+    &-sup {
+      font-size: 1rem;
+      position: absolute;
+      top: -0.9rem;
+      left: 0;
+      color: $gray30;
+    }
+  }
+
+  &__p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $gray20;
+  }
+	&__btn {
+		color: $white !important;
+		border: 1px solid $white;
+		text-align: center;
+		@include border-radius(5px);
+		font-size: 1rem;
+		padding: 10px;
+		margin: 0;
+		position: absolute;
+		top: calc(50% + 0.1rem);
+		left: 0;
+		transform: translateY(-50%);
+		font-weight: 600;
+	}
+
+
+	&__hide-span{
+		@include breakpoint($Xl-down){
+			display: none;
+		}
+	}
+
+
+
+} // .carousel-card

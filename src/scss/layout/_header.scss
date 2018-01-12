@@ -1,0 +1,336 @@
+$header-mobile-height: 65px;
+$header-tablet-height: 44px;
+
+.header {
+	position: relative;
+
+	&--black {
+		.header__top {
+			background-color: rgba($black, 0.75);
+
+			.header__top-link {
+				color: $white;
+
+				&:active,
+				&:focus,
+				&:visited {
+					color: $white;
+				}
+			}
+		}
+
+		.header__mid {
+			background-color: transparent;
+		}
+	}//.black
+
+	&--white {
+		.header__top {
+			background-color: #fbfbfb;
+
+			.header__top-link {
+				color: $black;
+
+				&:active,
+				&:focus,
+				&:visited {
+					color: $black;
+				}
+
+				&:hover {
+					color: $red;
+				}
+			}
+
+			.header__top-icon {
+				&--phone {
+					background-image: url("../images/svg/mh_phone--red.svg");
+				}
+				&--email {
+					background-image: url("../images/svg/hp_email--red.svg");
+				}
+				&--login {
+					background-image: url("../images/svg/hp_login--red.svg");
+				}
+			}
+		}
+
+		.header__mid {
+			background-color: $white;
+		}
+
+		.nav-desktop__link {
+			color: $black;
+
+			&:hover {
+				color: $red;
+			}
+		}
+
+	}//.white
+
+	&__top {
+		width: 100%;
+		border-radius: 0;
+		margin: 0;
+		top: 0;
+		position: absolute;
+		z-index: 110;
+
+		&-col {
+			@include breakpoint($mid-up) {
+				height: $header-tablet-height;
+			}
+			height: $header-mobile-height;
+		}
+
+		&-link {
+			position: relative;
+			height: $header-tablet-height;
+			line-height: $header-tablet-height;
+			cursor: pointer;
+			margin: 0 1rem 0 0;
+			font-weight: 400;
+			letter-spacing: 0.04rem;
+			display: inline-block;
+
+			&:hover,
+			&:hover:active,
+			&:hover:focus,
+			&:hover:visited {
+				color: $red;
+
+				&:before {
+					width: 100%;
+				}
+
+				.header__top-icon--phone {
+					background-image: url("../images/svg/mh_phone--red.svg");
+				}
+
+				.header__top-icon--email {
+					background-image: url("../images/svg/hp_email--red.svg");
+				}
+
+				.header__top-icon--login {
+					background-image: url("../images/svg/hp_login--red.svg");
+				}
+			}
+
+			&--user {
+				margin-right: 0;
+			}
+
+			&--manage {
+				position: relative;
+				display: inline-block;
+				margin-right: 1rem;
+			}
+
+			&:before {
+				@include transition(width 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
+				width: 0;
+				height: 1px;
+				background-color: $red;
+				display: block;
+				position: absolute;
+				bottom: 1px;
+				left: 50%;
+				content: "";
+				transform: translateX(-50%);
+			}
+		}
+
+		&-icon {
+			width: 15px;
+			height: 15px;
+			display: inline-block;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+			top: 2px;
+
+			&--phone {
+				background-image: url("../images/svg/mh_phone--white.svg");
+			}
+			&--email {
+				background-image: url("../images/svg/hp_email.svg");
+			}
+			&--login{
+				width: 20px;
+				height: 20px;
+				top: 6px;
+				background-image: url("../images/svg/hp_login.svg");
+			}
+		}
+
+
+
+		&-dropdown {
+			@include transition(height 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
+			overflow: hidden;
+			height: 0;
+			position: absolute;
+			top: $header-tablet-height - 1px;
+			right: 1rem;
+			background-color: $white;
+			z-index: 200;
+
+			&:after {
+				width: 100%;
+				height: 1px;
+				display: block;
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: $red;
+			}
+		}
+	}
+
+	//top Icon
+
+	// &__top
+
+	&__mid {
+		@include breakpoint($mid-up) {
+			width: 100%;
+			height: 92px;
+			position: absolute;
+			top: $header-tablet-height;
+			z-index: 100;
+			border-bottom: 1px solid rgba($white, 0.4);
+		}
+		position: relative;
+
+		&:after, &:before {
+			@include breakpoint($mid-up) {
+				display: none;
+			}
+			width: 0;
+			height: 1px;
+			content: "";
+			display: block;
+			position: absolute;
+			background-color: $gray10;
+			bottom: 6px;
+		}
+
+		&:after {
+			left: 0;
+		}
+
+		&:before {
+			right: 0;
+		}
+
+		.container {
+			@include breakpoint($x-sm-up) {
+				width: 100%;
+			}
+			@include breakpoint($mid-up) {
+				width: 970px;
+			}
+			@include breakpoint($lrg-up) {
+				width: 1170px;
+			}
+		}
+	}
+
+	&__logo {
+		@include breakpoint($mid-up) {
+			height: 92px;
+			max-width: 160px;
+		}
+		width: 100%;
+		height: 65px;
+		display: block;
+		max-width: 100px;
+		background-image: url("../images/svg/AAT-Kings-logo.svg");
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&__nav {
+		&-link {
+			color: $black;
+			height: $header-tablet-height;
+			line-height: $header-tablet-height;
+			cursor: pointer;
+			margin: 0 1rem 0 0;
+			font-weight: 100;
+			letter-spacing: 0.04rem;
+
+			&--icon {
+				position: relative;
+				min-width: 4rem;
+				display: inline-block;
+				font-weight: 100;
+				height: $header-mobile-height;
+				line-height: 60px;
+				font-size: 1.7em;
+				width: 100%;
+				text-align: center;
+				color: $black;
+				background-repeat: no-repeat;
+
+				&:after {
+					width: 24px;
+					height: 24px;
+					display: block;
+					content: "";
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translateX(-50%) translateY(-12px);
+				}
+
+				&--phone:after {
+					background-image: url("../images/svg/mh_phone.svg");
+				}
+				&--search:after {
+					background-image: url("../images/svg/mh_search.svg");
+				}
+				&--menu:after {
+					background-image: url("../images/svg/mh_menu.svg");
+				}
+				&--cross:after {
+					background-image: url("../images/svg/cross.svg");
+				}
+			}
+		}
+	}
+
+}
+
+// header
+
+.login-form {
+	padding: 1rem 0;
+
+	&__label {
+		margin-bottom: 0;
+		font-size: 1.2rem;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 15px 1rem;
+		margin: 0 0 8px;
+		border-radius: 5px;
+		border: 1px solid $gray10;
+		color: $gray30;
+	}
+
+	.btn-group {
+		width: 100%;
+		margin-bottom: 0.4rem;
+
+		.btn {
+			width: 50%;
+			margin: 0;
+		}
+	}
+}

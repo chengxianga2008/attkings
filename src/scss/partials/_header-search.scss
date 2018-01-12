@@ -1,0 +1,309 @@
+.global-search {
+  @include transition(height 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
+  width: 100%;
+  top: 65px;
+  z-index: 10;
+  position: absolute;
+  overflow: hidden;
+
+  &__date-picker {
+    line-height: 45px;
+    cursor: pointer;
+    color: $gray50;
+    margin: 0;
+    background-color: $white;
+  }
+
+  .btn-default {
+    text-align: center;
+    font-size: 0.9rem;
+    height: 55px;
+    font-weight: bold;
+  }
+
+  .button__sub {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: normal;
+  }
+
+  &__btn-group &__cat-btn {
+    position: relative;
+    &:last-of-type {
+      width: 1.2%;
+      .btn {
+        border-right: 0;
+      }
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: "";
+      height: 36px;
+      width: 1px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      z-index: 20;
+      transform: translateY(-18px);
+      background-color: rgba($white, 0.6);
+    }
+  }
+
+  &__cat-btn {
+    color: darken($white, 10%);
+    background-color: rgba($black, 0.4);
+    border: 0;
+    border-radius: 0;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+
+    &.active,
+	&.focus,
+	&:hover,
+    &:hover.active,
+    &:hover.focus,
+    &.active.focus,
+    &:active,
+    &:active.active,
+    &:active.focus,
+    &:active:hover {
+      color: $white;
+      background-color: rgba($black, 0.6);
+
+	  &:before{
+		border: 3px solid $white;
+	  }
+    }
+  }
+
+  &__non-label {
+    display: none;
+  }
+
+  &__btn {
+    background-color: $red;
+    color: $white;
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-top: 1px lighten($red, 10%) solid;
+    border-bottom: 1px darken($red, 10%) solid;
+  }
+
+
+
+  .select2 {
+    &-selection{
+      font-weight: 300;
+      &--single {
+        @include breakpoint($mid-down){
+          height: 45px;
+          border: 0;
+          border-radius: 0;
+        }
+      }
+      &__arrow {
+        b {
+          display: none;
+        }
+      }
+      &__rendered {
+        line-height: 45px !important;
+        position: relative;
+        &:after {
+          width: 1px;
+          height: 38px;
+          content: '';
+          display: block;
+          position: absolute;
+          top: 4px;
+          right: 0;
+          background-color: $gray20;
+        }
+      }
+    }
+  }// .select2
+
+}// .global-search
+
+.search-visible {
+  &-true {
+    .search-toggle {
+      border-right: 1px solid $gray10;
+      border-left: 1px solid $gray10;
+      border-bottom: 1px solid $white;
+
+      &:after {
+        background-image: url("../images/svg/cross.svg");
+      }
+
+    }
+    .global-search {
+      height: 150px;
+    }
+    .header__mid {
+      &:before {
+        @include breakpoint($mid-up) {
+          display: none;
+        }
+        @include breakpoint($x-sm-up) {
+          width: 22.3%;
+        }
+        @include breakpoint($sm-up) {
+          width: 22.8%;
+        }
+
+        width: 20.8%;
+      }
+      &:after {
+        @include breakpoint($mid-up) {
+          display: none;
+        }
+        @include breakpoint($x-sm-up){
+          width: 61.7%;
+        }
+        @include breakpoint($sm-up){
+          width: 56.2%;
+        }
+        width: 62.4%;
+      }
+    }
+  }
+
+  &-false {
+    .search-toggle .fa{
+      &-search {
+        display: inline-block;
+      }
+      &-times {
+        display: none;
+      }
+    }
+    .global-search {
+      height: 0;
+    }
+  }
+}
+
+.HomePage {
+  .global-search {
+    @include breakpoint($mid-up){
+      border: none;
+      height: 90px;
+      top: auto;
+      bottom: 0;
+      background-color: rgba($black, 0.4);
+    }
+
+    &__form {
+      @include breakpoint($mid-up){
+        width: 970px;
+        margin: 0 auto;
+        padding-top: 20px;
+      }
+      @include breakpoint($lrg-up){
+        width: 1170px;
+      }
+      width: 100%;
+      position: relative;
+    }
+
+    &__btn-group {
+      margin-right: 20px;
+    }
+
+    &__btn {
+      @include breakpoint($mid-up){
+        width: 21%;
+        float: right;
+        border-radius: 0 5px 5px 0;
+      }
+    }
+
+    &__non-label {
+      color: $white;
+      position: absolute;
+      top: -1.6rem;
+      left: 0;
+      font-size: 0.9rem;
+    }
+
+    &__cat-btn {
+      @include breakpoint($mid-up){
+        height: 49px;
+        position: relative;
+        background-color: transparent;
+
+        &:after {
+          display: none;
+        }
+
+        &:before {
+          border: 1px solid $white;
+          width: 97%;
+          height: 100%;
+          display: block;
+          top: 0;
+          left: 0;
+          transform: translateX(0px);
+          border-radius: 5px;
+        }
+
+        &:last-of-type {
+          width: 1%;
+        }
+
+        &.active,
+        &.focus,
+        &:hover,
+        &:hover.active,
+        &:hover.focus,
+        &.active.focus,
+        &:active,
+        &:active.active,
+        &:active.focus,
+        &:active:hover {
+          outline: 0;
+          background-color: transparent;
+
+		  &:before{
+			border: 3px solid $white;
+		  }
+        }
+
+      }
+    }
+
+    &__inputs {
+      @include breakpoint($mid-up){
+        width: 39.7%;
+        position: absolute;
+        right: 11.3%;
+        z-index: 100;
+      }
+    }
+
+    &__date-picker {
+      @include breakpoint($mid-up){
+        height: 48px;
+      }
+    }
+  }
+
+  .select2-selection--single {
+    @include breakpoint($mid-up){
+      height: 48px;
+      border: 0;
+      border-radius: 5px 0 0 5px;
+    }
+  }
+}

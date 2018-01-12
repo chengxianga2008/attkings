@@ -1,0 +1,81 @@
+.traveler-stories {
+	@include breakpoint($x-sm-up){
+		margin-top: rem(38px);
+	}
+	margin-top: rem(48px);
+
+	&__title {
+		font-weight: 300;
+		font-size: rem(58px);
+	}
+
+	&__overlay-img {
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+
+		&:before {
+			@include breakpoint($x-sm-up){
+				width: 768px;
+				height: 593px;
+				background-image: url("../images/hp_ts_md.jpg");
+				top: -50px;
+			}
+			@include breakpoint($sm-up){
+				width: 992px;
+				height: 691px;
+				background-image: url("../images/hp_ts_lg.jpg");
+			}
+			@include breakpoint($mid-up){
+				width: 1920px;
+				height: 691px;
+				background-image: url("../images/hp_ts_xlg.jpg");
+			}
+			width: 480px;
+			height: 593px;
+			background-image: url("../images/hp_ts_xs.jpg");
+			background-size: 100%;
+			background-repeat: no-repeat;
+			position: absolute;
+			content: "";
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			z-index: -1;
+		}
+	}
+
+	&__text {
+		@include breakpoint($mid-up){
+			padding: 15rem 0;
+		}
+		@include breakpoint($x-sm-up){
+			max-width: 480px;
+		}
+		color: $white;
+		padding: rem(100px 0);
+		margin: 0 auto;
+	}
+
+	&__p {
+		@include breakpoint($x-sm-up){
+			font-size: rem(26px);
+			padding: rem(60px 0);
+		}
+		padding: rem(50px 0);
+		font-size: rem(28px);
+		font-weight: 300;
+	}
+
+	&__btn {
+		font-weight: bold;
+		background-color: rgba($black, 0.3);
+		border: 1px solid $white;
+		padding: rem(15px 30px);
+		color: $white !important;
+		i {
+			font-size: rem(30px);
+			padding: rem(0 15px);
+		}
+	}
+}

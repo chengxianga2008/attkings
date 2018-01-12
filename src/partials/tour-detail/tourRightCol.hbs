@@ -1,0 +1,54 @@
+<div class="tour-detail__right-col col-md-4 col-xs-12">
+
+  <div class="tour-detail__booking-form visible-md visible-lg">
+
+    {{> tour-detail/tourPrices }}
+    {{> tour-detail/tourBookingForm }}
+
+  </div>{{!-- /.__header-prices --}}
+
+  <div class="tour-detail__customer-support">
+
+    <h4 class="tour-detail__title">Customer Support</h4>
+
+    {{> global/customerSupport }}
+
+  	<h4 class="tour-detail__title">Share this tour</h4>
+
+    {{> global/socialIcons }}
+
+  </div>
+
+  <div class="tour-detail__page-nav page-nav">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-xs-6 no-padding">
+
+          <a href="#" class="page-nav__image-link">
+            <img class="page-nav__image" src="src/images/koala.jpg" alt="Koala">
+          </a>
+
+          <a href="#" class="page-nav__link"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous tour</a>
+
+          <p class="page-nav__p">Alice Springs explorer</p>
+
+        </div>
+
+        <div class="col-xs-6 no-padding">
+
+          <a href="#" class="page-nav__image-link">
+            <img class="page-nav__image" src="src/images/big-rock.jpg" alt="big rock">
+          </a>
+
+          <a href="#" class="page-nav__link">Next tour <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+          <p class="page-nav__p">Cairns &amp; the Great Barrier Reef</p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

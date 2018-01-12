@@ -1,0 +1,41 @@
+.sub-menu {
+
+  &__list {
+    margin-top: -15px;
+    padding: 1.75rem 0;
+  }
+
+  &__link{
+    position: relative;
+
+    &:hover {
+      color: $red;
+    }
+
+    &--arrow {
+      &:before {
+        @include breakpoint($mid-up){
+          top: 4px;
+        }
+        top: 2px;
+        width: 5px;
+        height: 5px;
+        font-family: FontAwesome;
+        content: "\f105";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        color: $red;
+      }
+
+      &:active, &:focus, &:hover {
+        padding-left: 1.75rem !important;
+
+        &:before {
+          left: 0.5rem;
+        }
+      }
+    }
+  }
+}

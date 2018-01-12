@@ -1,0 +1,156 @@
+.tour-tabs {
+	overflow: hidden;
+	margin-bottom: -75px;
+	position: relative;
+
+	&:before {
+		width: 100vw;
+		height: 80px;
+		display: block;
+		content: "";
+		background-color: $white;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__container {
+		padding: rem(170px 30px);
+	}
+
+	&__head {
+		max-width: 992px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		border-bottom: 0;
+		position: relative;
+
+		&:before {
+			width: 2506px;
+			height: 152px;
+			display: block;
+			content: "";
+			background-image: url("../images/hp_top_white.png");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: absolute;
+			top: 70px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__li {
+		width: 25%;
+		height: 80px;
+		border-top: 1px solid $gray20;
+		border-bottom: 1px solid $gray20;
+		border-left: 1px solid $gray20;
+		font-weight: bold;
+		position: relative;
+		overflow: hidden;
+		padding: 1.05rem 0.5rem;
+		box-sizing: border-box;
+
+
+		&:first-child {
+			@include border-radius(5px 0 0 5px);
+		}
+
+		&:last-child {
+			@include border-radius(0 5px 5px 0);
+			border-right: 1px solid $gray20;
+		}
+
+		&.active {
+			padding: 0.95rem 0;
+			border: 2px solid $red;
+			color: $red;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			padding: 0.95rem 0;
+			border: 2px solid $red;
+			background-color: transparent !important;
+		}
+	}
+
+	&__link {
+		width: 100%;
+		height: 100%;
+		position: absolute !important;
+		display: block !important;
+		background-color: transparent !important;
+		border: 0 !important;
+		cursor: pointer;
+
+		top: 0;
+		left: 0;
+
+		&:hover {
+
+		}
+	}
+
+	&__title {
+		&--h5 {
+			font-size: 1.80rem;
+			font-weight: 800;
+			margin-bottom: 0.25rem;
+		}
+	}
+
+	&__tabs-p {
+		font-size: 1.25rem;
+		font-weight: normal;
+	}
+
+	//new css
+
+	&__content {
+		padding: 100px 0;
+		position: relative;
+
+		&:before {
+			width: 1920px;
+			height: 800px;
+			display: block;
+			content: "";
+			position: absolute;
+			background-image: url(../images/hp-tour-tab.jpg);
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: -1;
+		}
+	}
+
+	&__tab-pane{
+		display: none;
+
+		&.active{
+			display: block;
+		}
+	}
+	&__slide {
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+
+		&-inner {
+			margin: 0;
+			display: flex;
+			justify-content: space-around;
+		}
+
+	}
+	// .__slide
+
+	//finish
+}

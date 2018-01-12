@@ -1,0 +1,64 @@
+// @import url('~bootstrap/dist/css/bootstrap.css');
+// @import url('~font-awesome/css/font-awesome.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import '~normalize.css';
+@import "~sass-rem";
+@import '~breakpoint-sass/stylesheets/breakpoint';
+@import '~bootstrap-datepicker/dist/css/bootstrap-datepicker';
+@import '~select2/dist/css/select2.min';
+@import "~sass-rem";
+
+
+@import 'base/typography';
+@import 'base/reset';
+@import 'base/color';
+@import 'base/base';
+@import 'base/form';
+
+
+@import 'utils/mixins';
+@import 'utils/breakpoint';
+@import 'utils/icons';
+
+
+@import 'components/button';
+@import 'components/carousel';
+@import 'components/social-icons';
+@import 'components/carousel-card';
+@import 'components/customer-support';
+@import 'components/accordion-menu';
+
+@import 'partials/sub-menu';
+
+
+@import 'partials/nav-mobile';
+@import 'partials/nav-desktop';
+
+
+@import 'partials/home-broucher-out';
+@import 'partials/home-discount-updates';
+@import 'partials/header-search';
+@import 'partials/home-why';
+@import 'partials/home-day-tour';
+@import 'partials/home-featured-tour';
+@import 'partials/home-traveler-stories';
+@import 'partials/home-travel-exp';
+@import 'partials/home-inspiring-journey';
+@import 'partials/home-map';
+@import 'partials/home-tour-tabs';
+@import 'partials/home-instagram';
+
+/*Tour Page */
+@import "partials/tour-detail";
+@import "partials/tour-highlight";
+@import "partials/tour-itinerary";
+@import "partials/tour-accommodation";
+@import "partials/tour-included";
+@import "partials/tour-useful-information";
+@import "partials/tour-booking-form";
+@import "partials/tour-left-header";
+
+@import 'layout/forms';
+@import 'layout/header';
+@import 'layout/footer';

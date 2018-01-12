@@ -1,0 +1,28 @@
+.included {
+  @include breakpoint($lrg-up) {
+    padding: 0;
+  }
+  padding: 15px;
+  color: $dark-blue;
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    padding-left: 30px;
+    list-style-type: none;
+    line-height: 1.2;
+    position: relative;
+    margin-bottom: 1rem;
+
+    .fa {
+      padding-right: 20px;
+      font-weight: 100;
+      color: $red;
+      position: absolute;
+      left: 0;
+      top: 0.2rem;
+    }
+  }
+}

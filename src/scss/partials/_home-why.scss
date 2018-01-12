@@ -1,0 +1,117 @@
+@import "~sass-rem";
+
+.why {
+
+  &__title {
+    padding: 15px 0;
+    font-size: rem(80px);
+    text-align: center;
+  }
+
+  &__img {
+    @include transition(all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
+    position: relative;
+    width: 106%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    margin: -4px;
+
+    -webkit-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+
+  }
+
+  &__overlay-content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @include border-radius(3px);
+
+    &:hover {
+      cursor: pointer;
+
+      .why__img {
+        filter: none;
+      }
+    }
+  }
+  &__vector {
+    width: 100%;
+    height: 100%;
+    max-height: 100px;
+    margin-top: 90px;
+
+    background-size: cover 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .sunrise-img {
+    background-image: url(../images/svg/hp_sunrise.svg);
+  }
+  .farm-img {
+    background-image: url(../images/svg/hp_farm.svg);
+  }
+  .barbecue-img {
+    background-image: url(../images/svg/hp_barbecue.svg);
+  }
+
+  &__farm-img {
+    background-image: url(../images/svg/hp_farm.svg);
+    background-size: cover 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 100%;
+    height: 100%;
+    max-height: 70px;
+    margin-top: rem(90px);
+  }
+
+  &__overlay-img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.4);
+  }
+
+  &__overlay-text {
+    font-size: rem(22px);
+    color: $white;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    position: absolute;
+    bottom: 50px;
+
+  }
+  &__overlay-para {
+    vertical-align: middle;
+    line-height: 20px;
+    opacity: 0.5;
+    padding: rem(0 69px);
+    text-align: center;
+  }
+
+  /*touring section css*/
+  &__tour {
+    text-align: center;
+    padding: rem(80px 0);
+  }
+  &__tour-img {
+    max-height: 82px;
+    min-height: 82px;
+    width: 100%;
+    height: 100%;
+  }
+  &__bottom-text {
+    padding: rem(10px 40px);
+    line-height: 1.2;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+}

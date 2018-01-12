@@ -1,0 +1,67 @@
+.booking-form {
+  padding: 0 !important;
+
+  &__title {
+    color: $gray50;
+    font-size: 1.4rem;
+    position: relative;
+    font-weight: 600;
+
+    &-sub {
+      font-weight: 300;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__total-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0.5rem 0 1.5rem;
+    line-height: 1.5;
+
+    &-sub {
+      font-size: 1rem;
+      display: block;
+    }
+  }
+
+  &__add-guest {
+    color: $red;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__optional-extra-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__optional-extra-item {
+    padding: 0.5rem 1rem;
+    background-color: $gray10;
+    color: $gray80;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  &__opt-close-btn {
+    width: 30px;
+    height: 30px;
+    line-height: 27px;
+    display: block;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color: $red;
+    &:visited, &:focus {
+      color: $red;
+    }
+  }
+
+}

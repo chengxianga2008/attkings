@@ -1,0 +1,722 @@
+{{!--
+  Styles for this component
+  .src/scss/tour-detail/_nav-mobile.scss
+--}}
+
+<div class="header__nav--global-mobile global-mobile login-form-visible-false">
+
+  <div class="container-fluid global-mobile__login visible-xs visible-sm">
+    <div class="row">
+
+      <div class="col-xs-4 no-padding">
+        <a href="#" class="global-mobile__login--link">
+			<span class="global-mobile__login--link-icon global-mobile__login--link-icon--email"></span>
+          <span class="global-mobile__login--link-txt ">
+            Contact Us
+          </span>
+        </a>
+      </div>
+
+      <div class="col-xs-4 no-padding">
+        <a href="#" class="global-mobile__login--link">
+			<span class="global-mobile__login--link-icon global-mobile__login--link-icon--booking"></span>
+          <span class="global-mobile__login--link-txt">
+            Manage<br>your booking
+          </span>
+        </a>
+      </div>
+
+      <div class="col-xs-4 no-padding">
+        <a href="#" class="global-mobile__login--toggle">
+			<span class="global-mobile__login--toggle-icon global-mobile__login--toggle-icon--login fa-user-o"></span>
+          <!--<i class="fa fa-user-o" ></i>-->
+			<span class="global-mobile__login--toggle-icon global-mobile__login--toggle-icon--cross fa-times"></span>
+          <!--<i class="fa fa-times fa-3x" aria-hidden="true"></i>-->
+          <span class="global-mobile__login--link-txt">Login</span>
+        </a>
+      </div>
+
+    </div>
+  </div>{{!-- /.global-mobile__login --}}
+  <div class="container-fluid global-mobile__login-form">
+
+    <div class="row">
+      <ul class="nav nav-tabs global-mobile__login-tabs" role="tablist">
+        <li role="presentation" class="active global-mobile__login-tab text-center">
+          <a href="#login-form-customer" class="global-mobile__login-tab-link" aria-controls="login-form-customer" role="tab" data-toggle="tab">Customer Login</a>
+        </li>
+        <li role="presentation" class="global-mobile__login-tab text-center">
+          <a href="#login-form-agent" class="global-mobile__login-tab-link" aria-controls="login-form-agent" data-toggle="tab">Agent Login</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="global-mobile__login-heading">Login to your account</h2>
+        <div class="tab-content">
+
+          <div role="tabpanel" class="tab-pane fade in active" id="login-form-customer">
+            <form class="login-form-customer login-form" action="index.html">
+              <div class="container-fluid">
+
+                <div class="row">
+                  <div class="col-xs-12 no-padding">
+                    <label class="login-form__label" for="customer_email">Email address</label>
+                    <input type="email" id="customer_email" name="customer_email" placeholder="Your email address..." class="login-form__input">
+                  </div>
+                  <div class="col-xs-12 no-padding">
+                    <label class="login-form__label" for="customer_pass">Password</label>
+                    <input type="password" id="customer_pass" name="customer_pass" placeholder="Your password..." class="login-form__input">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 no-padding">
+                    <div class="custom-checkbox--red custom-checkbox">
+                      <input type="checkbox" id="login-form__customer-remember" name="login-form__customer-remember" checked><label for="login-form__customer-remember"><span class="custom-checkbox__text">Remeber me</span></label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 no-padding">
+                    <div class="btn-group btn-group--red" data-toggle="buttons">
+                      <label class="global-mobile__reg-btn btn btn-primary ">
+                        <input type="radio" name="login-toggle" id="register"> Register
+                      </label>
+                      <label class="global-mobile__reg-btn btn btn-primary  active">
+                        <input type="radio" name="login-toggle" id="login" checked>  Login
+                      </label>
+                    </div>
+                  </div>
+                </div>{{!-- /.row --}}
+
+              </div>
+            </form>
+          </div>{{!-- /.login-form-customer --}}
+
+          <div role="tabpanel" class="tab-pane fade" id="login-form-agent">
+            <form class="login-form-agent login-form" action="index.html">
+              <div class="container-fluid">
+
+                <div class="row">
+                  <div class="col-xs-12 no-padding">
+                    <label class="login-form__label" for="agent_email">Email address</label>
+                    <input type="email" id="agent_email" name="agent_email" placeholder="Your email address..." class="login-form__input">
+                  </div>
+                  <div class="col-xs-12 no-padding">
+                    <label class="login-form__label" for="agent_pass">Password</label>
+                    <input type="password" id="agent_pass" name="agent_pass" placeholder="Your password..." class="login-form__input">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 no-padding">
+                    <div class="custom-checkbox--red custom-checkbox">
+                      <input type="checkbox" id="login-agent-remember" name="login-agent-remember" checked>
+                      <label for="login-agent-remember"><span class="custom-checkbox__text">Remeber me</span></label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 no-padding">
+                    <div class="btn-group btn-group--red" data-toggle="buttons">
+                      <label class="btn btn-primary">
+                        <input type="radio" name="login-toggle" id="agent-register"> Register
+                      </label>
+                      <label class="btn btn-primary active">
+                        <input type="radio" name="login-toggle" id="agent-login" checked>  Login
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>{{!-- /.login-form-customer --}}
+
+        </div>{{!-- /.tab-content --}}
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <a href="#" class="login__link">Forgot Password?</a>
+      </div>
+    </div>
+
+  </div>{{!-- /.global-mobile__login-form --}}
+
+  <div class="container-fluid global-mobile__nav accordion-menu accordion-menu--cross visible-xs visible-sm">
+
+    <div class="panel-group" id="mobileNav" role="tablist" aria-multiselectable="true">
+      <div class="row">
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTours">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#mobileNav" href="#collapseTours" aria-expanded="false" aria-controls="collapseTours" class="accordion-menu__parent-link collapsed">
+                Tours
+              </a>
+            </h4>
+          </div>
+
+
+          <div id="collapseTours" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTours">
+            <div class="panel-body">
+
+              <div class="panel-group" id="tours" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading_guided_holidays">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#tours" href="#collapse_guided_holidays" aria-expanded="true" aria-controls="collapse_guided_holidays" class="accordion-menu__parent-link collapsed">
+                        Guided Holidays <span class="global-mobile__nav-parent-sup">4 to 22 days</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse_guided_holidays" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_guided_holidays">
+                    <div class="panel-body panel-body--inner">
+
+                      <div class="global-mobile__link-panel">
+
+                        <a href="#" class="mega-menu__link mega-menu__link--gbr">
+                          <span class="mega-menu__link-text">Great Barrier<br />
+                          Reef &amp; Queensland</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--asa">
+                          <span class="mega-menu__link-text">Adelaide &amp;<br />
+                          South Australia</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--mlv">
+                          <span class="mega-menu__link-text">Melbourne &amp;<br />
+                          Victoria</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--hbt">
+                          <span class="mega-menu__link-text">Hobart &amp;<br />
+                          Tasmania</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nth">
+                          <span class="mega-menu__link-text">The Top End,<br />
+                          Northern Territory</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nsw">
+                          <span class="mega-menu__link-text">Sydney &amp; New<br />
+                          South Wales</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--pwa">
+                          <span class="mega-menu__link-text">Perth &amp;<br />
+                          Western Australia</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--rnt">
+                          <span class="mega-menu__link-text">The Red Centre,<br />
+                          Northern Territory</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nzd">
+                          <span class="mega-menu__link-text">New Zealand</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nzs">
+                          <span class="mega-menu__link-text">South Island,<br />
+                          New Zealand</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nzn">
+                          <span class="mega-menu__link-text">North Island,<br />
+                          New Zealand</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--view-all">
+                            <span class="mega-menu__link-text">VIEW ALL <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></span>
+                          </a>
+
+                      </div>{{!-- /.mega-menu__link-panel-bottom --}}
+
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading_short_breaks">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#tours" href="#collapse_short_breaks" aria-expanded="false" aria-controls="collapse_short_breaks" class="accordion-menu__parent-link collapsed">
+                        Short Breaks <span class="global-mobile__nav-parent-sup">2 to 7 days</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse_short_breaks" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_short_breaks">
+                    <div class="panel-body panel-body--inner">
+
+                      <div class="global-mobile__link-panel">
+
+                        <a href="#" class="mega-menu__link mega-menu__link--gbr">
+                          <span class="mega-menu__link-text">Great Barrier<br />
+                          Reef &amp; Queensland</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--asa">
+                          <span class="mega-menu__link-text">Adelaide &amp;<br />
+                          South Australia</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--mlv">
+                          <span class="mega-menu__link-text">Melbourne &amp;<br />
+                          Victoria</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--hbt">
+                          <span class="mega-menu__link-text">Hobart &amp;<br />
+                          Tasmania</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nth">
+                          <span class="mega-menu__link-text">The Top End,<br />
+                          Northern Territory</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nsw">
+                          <span class="mega-menu__link-text">Sydney &amp; New<br />
+                          South Wales</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--pwa">
+                          <span class="mega-menu__link-text">Perth &amp;<br />
+                          Western Australia</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--rnt">
+                          <span class="mega-menu__link-text">The Red Centre,<br />
+                          Northern Territory</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nzd">
+                          <span class="mega-menu__link-text">New Zealand</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nzs">
+                          <span class="mega-menu__link-text">South Island,<br />
+                          New Zealand</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nzn">
+                          <span class="mega-menu__link-text">North Island,<br />
+                          New Zealand</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--view-all">
+                            <span class="mega-menu__link-text">VIEW ALL <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></span>
+                          </a>
+
+                      </div>{{!-- /.mega-menu__link-panel-bottom --}}
+
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading_day_tours">
+                    <h4 class="panel-title">
+                      <a  role="button" data-toggle="collapse" data-parent="#tours" href="#collapse_day_tours" aria-expanded="false" aria-controls="collapse_day_tours" class="accordion-menu__parent-link collapsed">
+                        Day Tours <span class="global-mobile__nav-parent-sup">Half day to 1 day</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse_day_tours" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_day_tours">
+                    <div class="panel-body panel-body--inner">
+                      <div class="global-mobile__link-panel">
+
+                        <a href="#" class="mega-menu__link mega-menu__link--gbr">
+                          <span class="mega-menu__link-text">Great Barrier<br />
+                          Reef &amp; Queensland</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--asa">
+                          <span class="mega-menu__link-text">Adelaide &amp;<br />
+                          South Australia</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--mlv">
+                          <span class="mega-menu__link-text">Melbourne &amp;<br />
+                          Victoria</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--hbt">
+                          <span class="mega-menu__link-text">Hobart &amp;<br />
+                          Tasmania</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nth">
+                          <span class="mega-menu__link-text">The Top End,<br />
+                          Northern Territory</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nsw">
+                          <span class="mega-menu__link-text">Sydney &amp; New<br />
+                          South Wales</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--pwa">
+                          <span class="mega-menu__link-text">Perth &amp;<br />
+                          Western Australia</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--rnt">
+                          <span class="mega-menu__link-text">The Red Centre,<br />
+                          Northern Territory</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nzd">
+                          <span class="mega-menu__link-text">New Zealand</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nzs">
+                          <span class="mega-menu__link-text">South Island,<br />
+                          New Zealand</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--nzn">
+                          <span class="mega-menu__link-text">North Island,<br />
+                          New Zealand</span>
+                        </a>
+
+                        <a href="#" class="mega-menu__link mega-menu__link--view-all">
+                            <span class="mega-menu__link-text">VIEW ALL <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></span>
+                          </a>
+
+                      </div>{{!-- /.mega-menu__link-panel-bottom --}}
+
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading_inspiring_journeys">
+                    <h4 class="panel-title">
+                      <a  role="button" data-toggle="collapse" data-parent="#tours" href="#collapse_inspiring_journeys" aria-expanded="false" aria-controls="collapse_inspiring_journeys" class="accordion-menu__parent-link collapsed">
+                        Inspiring Journeys <span class="global-mobile__nav-parent-sup">5 to 21 days</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse_inspiring_journeys" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_inspiring_journeys">
+                    <div class="panel-body panel-body--inner">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <h4 class="mega-menu__list-header">Australia</h4>
+
+                            <ul class="mega-menu__list">
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title">
+                                  <a href="#" class="mega-menu__item-link">Inspiring Australia</a>
+                                </h5>
+                                <p class="mega-menu__item-link-title--sub">
+                                  <a href="#" class="mega-menu__item-link">3 days Cairns to Sydney</a>
+                                </p>
+
+                              </li>
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Kakadu's Ancient Secrets</a></h5>
+                                <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">5 days Darwin return</a></p>
+
+                              </li>
+                              <li class="mega-menu__item">
+                                <h5 class="mega-menu__item-link-title">
+                                  <a href="#" class="mega-menu__item-link">Outback Australia: Alice Springs the colour of red</a>
+                                </h5>
+                                <p class="mega-menu__item-link-title--sub">
+                                  <a href="#" class="mega-menu__item-link">5 days Uluru to Alice Springs</a>
+                                </p>
+
+                              </li>
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Victorias hidden gems</a></h5>
+                                <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">7 days Melbourne return</a></p>
+
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-xs-6">
+                            <h4 class="mega-menu__list-header">New Zealand</h4>
+
+                            <ul class="mega-menu__list">
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title">
+                                      <a href="#" class="mega-menu__item-link">The endless shores</a>
+                                    </h5>
+                                <p class="mega-menu__item-link-title--sub">
+                                  <a href="#" class="mega-menu__item-link">11 days Wellington to Auckland</a>
+                                </p>
+
+                              </li>
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title">
+                                      <a href="#" class="mega-menu__item-link">The Southern Drift</a>
+                                    </h5>
+                                <p class="mega-menu__item-link-title--sub">
+                                  <a href="#" class="mega-menu__item-link">12 days Christchurch return</a>
+                                </p>
+
+                              </li>
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">The Long white cloud</a>
+                                    </h5>
+                                <p class="mega-menu__item-link-title--sub">
+                                  <a href="#" class="mega-menu__item-link">22 days Christchurch to Auckland</a>
+                                </p>
+
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>{{!-- /.panel --}}
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading_aussie_adventures">
+                    <h4 class="panel-title">
+                      <a  role="button" data-toggle="collapse" data-parent="#tours" href="#collapse_aussie_adventures" aria-expanded="false" aria-controls="collapse_aussie_adventures" class="accordion-menu__parent-link collapsed">
+                        Aussie Adventures <span class="global-mobile__nav-parent-sup">2 to 4 days</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse_aussie_adventures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_aussie_adventures">
+                    <div class="panel-body panel-body--inner">
+                      <div class="container-fluid">
+                        <div class="row">
+
+                          <div class="col-xs-6">
+                            <ul class="mega-menu__list">
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Top end escape</a></h5>
+                                <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">4 day Darwin return</a></p>
+
+                              </li>
+                              <li class="mega-menu__item">
+                                <h5 class="mega-menu__item-link-title">
+                                      <a href="#" class="mega-menu__item-link">Red center escape</a>
+                                    </h5>
+                                <p class="mega-menu__item-link-title--sub">
+                                  <a href="#" class="mega-menu__item-link">3 days ALice Springs return</a>
+                                </p>
+                              </li>
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Kangaroo island escape</a></h5>
+                                <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">2 days Adelaide return</a></p>
+
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="col-xs-6">
+                            <ul class="mega-menu__list">
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Red Center Escape</a></h5>
+                                <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">3 days Uluru to Alice Springs</a></p>
+
+                              </li>
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Sydney escape</a></h5>
+                                <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">4 days Sydneys return</a></p>
+
+                              </li>
+                              <li class="mega-menu__item">
+
+                                <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">The Long white cloud</a></h5>
+                                <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">22 days Christchurch to Auckland</a></p>
+
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>{{!-- /.panel --}}
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading_down_under_tours">
+                    <h4 class="panel-title">
+                      <a  role="button" data-toggle="collapse" data-parent="#tours" href="#collapse_down_under_tours" aria-expanded="false" aria-controls="collapse_down_under_tours" class="accordion-menu__parent-link collapsed">
+                        Down Under Tours <span class="global-mobile__nav-parent-sup">1 to 6 days</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse_down_under_tours" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_down_under_tours">
+                    <div class="panel-body panel-body--inner">
+
+                      <div class="container-fluid">
+
+                        <div class="row">
+
+                          <div class="col-xs-4 no-padding">
+                            <a href="#"><img src="http://via.placeholder.com/100x60" alt="Placeholder thumb" class="global-mobile__sub-panel-image"></a>
+                          </div>
+
+                          <div class="col-xs-8">
+                            <h5 class="global-mobile__sub-panel-link-title"><a href="#" class="global-mobile__sub-panel-link-text">Guided holidays</a></h5>
+                            <p class="global-mobile__sub-panel-link-title-sub"><a href="#" class="global-mobile__sub-panel-link-title-sub-text">4 to 21 days</a></p>
+                          </div>
+
+                        </div>
+                        <div class="row">
+
+                          <div class="col-xs-4 no-padding">
+                            <a href="#"><img src="http://via.placeholder.com/100x60" alt="Placeholder thumb" class="global-mobile__sub-panel-image"></a>
+                          </div>
+
+                          <div class="col-xs-8">
+                            <h5 class="global-mobile__sub-panel-link-title"><a href="#" class="global-mobile__sub-panel-link-text">Day tours</a></h5>
+                            <p class="global-mobile__sub-panel-link-title-sub"><a href="#" class="global-mobile__sub-panel-link-title-sub-text">Half day - 1 day</a></p>
+                          </div>
+
+                        </div>
+
+                        <div class="row">
+
+                          <div class="col-xs-4 no-padding">
+                            <a href="#"><img src="http://via.placeholder.com/100x60" alt="Placeholder thumb" class="global-mobile__sub-panel-image"></a>
+                          </div>
+
+                          <div class="col-xs-8">
+                            <h5 class="global-mobile__sub-panel-link-title"><a href="#" class="global-mobile__sub-panel-link-text">Short Breaks</a></h5>
+                            <p class="global-mobile__sub-panel-link-title-sub"><a href="#" class="global-mobile__sub-panel-link-title-sub-text">2 to 7 days</a></p>
+                          </div>
+
+                        </div>
+
+                      </div>{{!-- /.container-fluid --}}
+
+                    </div>
+                  </div>{{!-- /#collapse_down_under_tours --}}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a href="#" class="accordion-menu__parent-link collapsed">
+                Destinations Map
+              </a>
+            </h4>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a href="#" class="accordion-menu__parent-link collapsed">
+                Brochures
+              </a>
+            </h4>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a href="#" class="accordion-menu__parent-link collapsed">
+                Ways to Save
+              </a>
+            </h4>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingAbout">
+            <h4 class="panel-title">
+              <a href="#collapseAbout" role="button" data-toggle="collapse" data-parent="#mobileNav" aria-expanded="false" aria-controls="collapseAbout" class="collapsed accordion-menu__parent-link">
+                About us
+              </a>
+            </h4>
+          </div>
+          <div id="collapseAbout" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingAbout">
+            <div class="panel-body">
+              <div class="container-fluid">
+                <div class="col-xs-6 no-padding">
+                  <ul class="sub-menu__list">
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">The AAt Kings Difference</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">Our History</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">AAT Kings Cares</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">The Travel Corporation</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">Awards</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">Contact Us</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">FAQ's</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-xs-6 no-padding">
+                  <ul class="sub-menu__list">
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">Our People</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">Video</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">Indigenous Culture</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">Groups &amp; Charters</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">Careers</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">Booking Conditions</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a href="#" class="sub-menu__link sub-menu__link--arrow">Our Blog</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{!-- panel-default --}}
+
+      </div>
+    </div>
+
+  </div>
+  {{!-- global-mobile__nav --}}
+
+</div>
+{{!-- header__nav-global-mobile --}}

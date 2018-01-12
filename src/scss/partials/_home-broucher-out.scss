@@ -1,0 +1,96 @@
+.brochure-out {
+  background-color: #FAF4F1;
+  margin-top: 15px;
+
+  &__title {
+	margin: 0;
+	text-align: center;
+	font-size: rem(48px);
+	span {
+	  color: $gray30;
+	}
+  }
+
+  &__p {
+	font-size: rem(20px);
+	color: $gray70;
+	padding: 20px 0;
+	line-height: 1.4;
+  }
+
+  &__bg-img {
+	width: 100%;
+	position: relative;
+
+	&:before {
+	  @include breakpoint($lrg-up) {
+		background-image: url("../images/hp_bo_top.png");
+	  }
+
+	  width: 1920px;
+	  height: 137px;
+	  display: block;
+	  content: "";
+	  position: absolute;
+	  top: -136px;
+	  left: 50%;
+	  transform: translateX(-50%);
+
+	  background-repeat: no-repeat;
+	  background-size: 100% auto;
+	}
+
+	&:after {
+	  @include breakpoint($lrg-up) {
+		background-image: url("../images/hp_bo_bottom.png");
+	  }
+
+	  width: 1920px;
+	  height: 131px;
+	  display: block;
+	  content: "";
+	  position: absolute;
+	  bottom: -131px;
+	  left: 50%;
+	  transform: translateX(-50%);
+
+	  background-repeat: no-repeat;
+	  background-size: 100% auto;
+	}
+
+  }
+
+  &__left-img {
+	padding-bottom: 20px;
+	width: 100%;
+  }
+  &__right-content {
+	padding: 50px 0;
+  }
+  &__right-btn {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	.btn {
+	  width: 50%;
+	  font-weight: bold;
+	  border: 1px solid $red;
+	  padding: rem(20px 30px);
+	  color: $red;
+	  margin-right:rem(20px);
+	  i {
+		font-size: rem(30px);
+		padding: rem(0 0 0 15px);
+	  }
+
+	  &:hover,
+	  &:active {
+		background-color: $red;
+		color: $white;
+	  }
+	}
+
+  }
+
+}

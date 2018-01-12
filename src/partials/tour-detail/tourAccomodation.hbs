@@ -1,0 +1,57 @@
+<div class="tabs__accommodation accommodation">
+
+	<p class="accommodation--p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. </p>
+
+		<div id="inner-accordion-acc-budget" role="tablist" class="panel-group inner-accordion">
+
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="in-acc-accom-h1">
+					<h4 class="panel-title inner-accordion__title">
+						<a class="collapsed inner-accordion__title-link" data-toggle="collapse" href="#HotelBudget" aria-expanded="false"
+						   aria-controls="collapseOne">
+							Hotel name sample
+							<img src="src/images/svg/tour-dollar.svg" alt="dollar svg icon" class="accommodation--icon">
+							<span class="accommodation--span accommodation--span--brown">Budget</span>
+						</a>
+					</h4>
+				</div>
+				<div id="HotelBudget" class=" collapse" role="tabpanel" aria-labelledby="in-acc-accom-h1" data-parent="#accommodation">
+					<div class="panel-body">
+						{{> tour-detail/tourAccommodationHotelBudget }}
+					</div>
+				</div>
+			</div>
+			<!--Hotel Name Sample Budget-->
+
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="in-acc-accom-h2">
+					<h4 class="panel-title inner-accordion__title">
+						<a class="collapsed inner-accordion__title-link" data-toggle="collapse" href="#HotelSuperior" aria-expanded="false"
+						   aria-controls="collapseTwo">
+							Hotel Name Sample
+							<img src="src/images/svg/tour-superior.svg" alt="dollar svg icon" class="accommodation--icon">
+							<span class="accommodation--span accommodation--span--brown">Superior</span>
+						</a>
+					</h4>
+				</div>
+				<div id="HotelSuperior" class=" collapse" role="tabpanel" aria-labelledby="in-acc-accom-h2" data-parent="#accommodation">
+					<div class="panel-body">
+						{{> tour-detail/tourAccommodationHotelBudget}}
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+	<div class="accommodation--info">
+		<h5 class="accommodation--h5">Need accommodation?</h5>
+		<p class="accommodation--p">Our special discounted rates make booking accommodation with us during your holiday both easy and affordable at selected AAT Kings hotels and resorts.
+			<a href="#" class="budget--btn">
+				Find out more
+				<i class="fa fa-angle-right" aria-hidden="true"></i>
+			</a>
+		</p>
+	</div>
+
+</div>

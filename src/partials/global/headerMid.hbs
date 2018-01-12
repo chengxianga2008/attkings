@@ -1,0 +1,517 @@
+{{!--
+  Styles for this component
+  .src/scss/layout/_header.scss
+--}}
+
+<div class="header__mid">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-5 col-sm-4 col-md-4">
+        <a href="/index.html" class="header__logo">
+          {{!-- svg logo managed by webpack in the sass
+          for reference ./src/scss/layout/_header.scss:154
+          https://css-tricks.com/icon-fonts-vs-svg/ --}}
+        </a>
+      </div>
+
+      {{!-- Desktop nav contianer --}}
+      {{!-- contains the mega menu --}}
+      <div class="col-md-8 visible-md-inline-block visible-lg-inline-block visible-lg-inline-block">
+
+        <nav class="header__nav--desktop nav-desktop">
+
+          <ul class="nav-desktop__links">
+            <li class="nav-desktop__li nav-desktop__li--dropdown">
+              <div class="nav-desktop__link">
+                Tours <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </div>
+
+              {{!-- Mega menu --}}
+              <div class="nav-desktop__mega-menu mega-menu">
+
+                <div class="mega-menu__link-parent">
+                  <div class="mega-menu__link-panel--left">
+                    <p class="mega-menu__toggle mega-menu__title--blue">
+                      <span class="mega-menu__toggle-text">Guided Holidays</span>
+                      <span class="mega-menu__icon mega-menu__icon--gh"></span>
+                    </p>
+                  </div>
+                  <div class="mega-menu__link-panel--right">
+
+                    <div class="mega-menu__link-panel-top">
+
+                      <div class="mega-menu__link-panel-top--left">
+                        <h3 class="mega-menu__link-heading mega-menu__heading--blue">Guided Holidays <span class="mega-menu__icon mega-menu__icon--gh"></span></h3>
+                      </div>
+
+                      <div class="mega-menu__link-panel-top--right">
+                        <p class="no-padding">From 4&ndash;22 days, an AAT Kings Guided Holidays lets you fully explore a destination and immerse yourself in its landscape, history and culture.</p>
+                      </div>
+
+                    </div>{{!-- /.mega-menu__link-panel-top --}}
+
+                    <div class="mega-menu__link-panel-bottom">
+
+                      <a href="#" class="mega-menu__link mega-menu__link--gbr"><span class="mega-menu__link-text">Great Barrier<br /> Reef &amp; Queensland</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--asa"><span class="mega-menu__link-text">Adelaide &amp;<br /> South Australia</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--mlv"><span class="mega-menu__link-text">Melbourne &amp;<br />
+                        Victoria</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--hbt"><span class="mega-menu__link-text">Hobart &amp;<br /> Tasmania</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nth"><span class="mega-menu__link-text">The Top End,<br /> Northern Territory</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nsw"><span class="mega-menu__link-text">Sydney &amp; New<br /> South Wales</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--pwa"><span class="mega-menu__link-text">Perth &amp;<br /> Western Australia</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--rnt"><span class="mega-menu__link-text">The Red Centre,<br /> Northern Territory</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nzd"><span class="mega-menu__link-text">New Zealand</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nzs"><span class="mega-menu__link-text">South Island,<br /> New Zealand</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nzn"><span class="mega-menu__link-text">North Island,<br /> New Zealand</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--view-all"><span class="mega-menu__link-text">VIEW ALL <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></span></a>
+
+                    </div>{{!-- /.mega-menu__link-panel-bottom --}}
+
+                  </div>
+                </div>{{!-- /.guided holidays --}}
+
+                <div class="mega-menu__link-parent">
+                  <div class="mega-menu__link-panel--left">
+                    <p class="mega-menu__toggle mega-menu__title--brown">
+                      <span class="mega-menu__toggle-text">Short<br />Breaks</span>
+                      <span class="mega-menu__icon mega-menu__icon--sb"></span>
+                    </p>
+                  </div>
+                  <div class="mega-menu__link-panel--right">
+
+                    <div class="mega-menu__link-panel-top">
+
+                      <div class="mega-menu__link-panel-top--left">
+                        <h3 class="mega-menu__link-heading mega-menu__heading--brown">Short<br />Breaks <span class="mega-menu__icon mega-menu__icon--sb"></span></h3>
+                      </div>
+
+                      <div class="mega-menu__link-panel-top--right">
+                        <p class="no-padding">From 2-7 days, Short Breaks across Australia and New Zealand. You’ll benefit from the combined experience of every Driver Guide you travel with as they passionately bring each destination to life.</p>
+                      </div>
+
+                    </div>{{!-- /.mega-menu__link-panel-top --}}
+
+                    <div class="mega-menu__link-panel-bottom">
+
+                      <a href="#" class="mega-menu__link mega-menu__link--gbr"><span class="mega-menu__link-text">Great Barrier<br /> Reef &amp; Queensland</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--asa"><span class="mega-menu__link-text">Adelaide &amp;<br /> South Australia</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--mlv"><span class="mega-menu__link-text">Melbourne &amp;<br /> Victoria</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--hbt"><span class="mega-menu__link-text">Hobart &amp;<br /> Tasmania</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nth"><span class="mega-menu__link-text">The Top End,<br /> Northern Territory</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nsw"><span class="mega-menu__link-text">Sydney &amp; New<br /> South Wales</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--pwa"><span class="mega-menu__link-text">Perth &amp;<br /> Western Australia</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--rnt"><span class="mega-menu__link-text">The Red Centre,<br /> Northern Territory</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nzd"><span class="mega-menu__link-text">New Zealand</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nzs"><span class="mega-menu__link-text">South Island,<br /> New Zealand</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nzn"><span class="mega-menu__link-text">North Island,<br /> New Zealand</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--view-all"><span class="mega-menu__link-text">VIEW ALL <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></span></a>
+
+                    </div> {{!-- /.mega-menu__link-panel-bottom --}}
+
+                  </div>
+                </div> {{!-- /.short breaks --}}
+
+                <div class="mega-menu__link-parent">
+                  <div class="mega-menu__link-panel--left">
+                    <p class="mega-menu__toggle mega-menu__title--yellow">
+                      <span class="mega-menu__toggle-text">Day<br />Tours</span>
+                      <span class="mega-menu__icon mega-menu__icon--dt"></span>
+                    </p>
+                  </div>
+                  <div class="mega-menu__link-panel--right">
+
+                    <div class="mega-menu__link-panel-top">
+
+                      <div class="mega-menu__link-panel-top--left">
+                        <h3 class="mega-menu__link-heading mega-menu__heading--yellow">Day Tours <span class="mega-menu__icon mega-menu__icon--dt"></span></h3>
+                      </div>
+
+                      <div class="mega-menu__link-panel-top--right">
+
+                        <p class="no-padding">If you've got a day to spare, AAT Kings offers one day and half day sightseeing tours across Australia including Sydney, Melbourne, Cairns, Darwin, Uluru, Alice Springs, Perth, Adelaide, Brisbane and the Gold Coast.</p>
+
+                      </div>
+
+                    </div>{{!-- /.mega-menu__link-panel-top --}}
+
+                    <div class="mega-menu__link-panel-bottom">
+
+                      <a href="#" class="mega-menu__link mega-menu__link--gbr"><span class="mega-menu__link-text">Great Barrier<br /> Reef &amp; Queensland</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--asa"><span class="mega-menu__link-text">Adelaide &amp;<br /> South Australia</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--mlv"><span class="mega-menu__link-text">Melbourne &amp;<br /> Victoria</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--hbt"><span class="mega-menu__link-text">Hobart &amp;<br /> Tasmania</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nth"><span class="mega-menu__link-text">The Top End,<br /> Northern Territory</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nsw"><span class="mega-menu__link-text">Sydney &amp; New<br /> South Wales</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--pwa"><span class="mega-menu__link-text">Perth &amp;<br /> Western Australia</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--rnt"><span class="mega-menu__link-text">The Red Centre,<br /> Northern Territory</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nzd"><span class="mega-menu__link-text">New Zealand</span></a>
+                      <a href="#" class="mega-menu__link mega-menu__link--nzs"><span class="mega-menu__link-text">South Island,<br /> New Zealand</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--nzn"><span class="mega-menu__link-text">North Island,<br /> New Zealand</span></a>
+
+                      <a href="#" class="mega-menu__link mega-menu__link--view-all"><span class="mega-menu__link-text">VIEW ALL <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></span></a>
+
+                    </div>{{!-- /.mega-menu__link-panel-bottom --}}
+
+                  </div>
+                </div>{{!-- /.day tours --}}
+
+                <div class="mega-menu__link-parent">
+                  <div class="mega-menu__link-panel--left">
+                    <p class="mega-menu__toggle mega-menu__title--light-brown">
+                      <span class="mega-menu__toggle-text">Inspiring Journeys</span>
+                      <span class="mega-menu__icon mega-menu__icon--ij"></span>
+                    </p>
+                  </div>
+                  <div class="mega-menu__link-panel--right">
+
+                    <div class="mega-menu__link-panel-top">
+
+                      <div class="mega-menu__link-panel-top--left">
+                        <h3 class="mega-menu__link-heading mega-menu__heading--light-brown">Inspiring Journeys <span class="mega-menu__icon mega-menu__icon--ij"></span></h3>
+                      </div>
+
+                      <div class="mega-menu__link-panel-top--right">
+                        <p class="no-padding">From 4-22 days, an AAT Kings Guided Holidays lets you fully explore a destination and immerse yourself in its landscape, history and culture.</p>
+                      </div>
+
+                    </div>{{!-- /.mega-menu__link-panel-top --}}
+
+                    <div class="mega-menu__link-panel-bottom">
+                      <div class="mega-menu__row">
+
+                        <div class="col-md-6">
+
+                          <h4 class="mega-menu__list-header">Australia</h4>
+
+                          <ul class="mega-menu__list">
+                            <li class="mega-menu__item">
+
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Inspiring Australia</a></h5>
+                              <p class="mega-menu__item-link-title--sub">
+                                <a href="#" class="mega-menu__item-link">3 days Cairns to Sydney</a>
+                              </p>
+
+                            </li>
+                            <li class="mega-menu__item">
+
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Kakadu's Ancient Secrets</a></h5>
+                              <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">5 days Darwin return</a></p>
+
+                            </li>
+                            <li class="mega-menu__item">
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Outback Australia: Alice Springs the colour of red</a></h5>
+                              <p class="mega-menu__item-link-title--sub">
+                                <a href="#" class="mega-menu__item-link">5 days Uluru to Alice Springs</a>
+                              </p>
+                            </li>
+                            <li class="mega-menu__item">
+
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Victorias hidden gems</a></h5>
+                              <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">7 days Melbourne return</a></p>
+
+                            </li>
+                          </ul>
+
+                        </div>
+                        <div class="col-md-6">
+
+                          <h4 class="mega-menu__list-header">New Zealand</h4>
+
+                          <ul class="mega-menu__list">
+                            <li class="mega-menu__item">
+
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">The endless shores</a></h5>
+                              <p class="mega-menu__item-link-title--sub">
+                                <a href="#" class="mega-menu__item-link">11 days Wellington to Auckland</a>
+                              </p>
+
+                            </li>
+                            <li class="mega-menu__item">
+
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">The Southern Drift</a></h5>
+                              <p class="mega-menu__item-link-title--sub">
+                                <a href="#" class="mega-menu__item-link">12 days Christchurch return</a>
+                              </p>
+
+                            </li>
+                            <li class="mega-menu__item">
+
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">The Long white cloud</a></h5>
+                              <p class="mega-menu__item-link-title--sub">
+                                <a href="#" class="mega-menu__item-link">22 days Christchurch to Auckland</a>
+                              </p>
+
+                            </li>
+                          </ul>
+
+                        </div>
+
+                      </div>
+                    </div>{{!-- /.mega-menu__link-panel-bottom --}}
+
+                  </div>
+                </div>{{!-- /.inspiring journeys --}}
+
+                <div class="mega-menu__link-parent">
+                  <div class="mega-menu__link-panel--left">
+                    <p class="mega-menu__toggle mega-menu__title--orange">
+                      <span class="mega-menu__toggle-text">Aussie Adventures</span>
+                      <span class="mega-menu__icon mega-menu__icon--aa"></span>
+                    </p>
+                  </div>
+                  <div class="mega-menu__link-panel--right">
+
+                    <div class="mega-menu__link-panel-top">
+
+                      <div class="mega-menu__link-panel-top--left">
+                        <h3 class="mega-menu__link-heading mega-menu__heading--orange">Aussie Adventures <span class="mega-menu__icon mega-menu__icon--aa"></span></h3>
+                      </div>
+
+                      <div class="mega-menu__link-panel-top--right">
+                        <p class="no-padding">Aussie Adventures actively explore the great outdoors in a small group of fun and friendly travellers. Aussie Adventures focus on value for money, but we don’t skimp on the must-see highlights and excitement of travelling in Australia
+                          with our down-to-earth guides.</p>
+                      </div>
+
+                    </div>{{!-- /.mega-menu__link-panel-top --}}
+
+                    <div class="mega-menu__link-panel-bottom">
+                      <div class="mega-menu__row mega-menu__row--no-heading">
+
+                        <div class="col-md-6">
+
+                          <ul class="mega-menu__list">
+                            <li class="mega-menu__item">
+
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Top end escape</a></h5>
+                              <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">4 day Darwin return</a></p>
+
+                            </li>
+                            <li class="mega-menu__item">
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Red center escape</a></h5>
+                              <p class="mega-menu__item-link-title--sub">
+                                <a href="#" class="mega-menu__item-link">3 days ALice Springs return</a>
+                              </p>
+                            </li>
+                            <li class="mega-menu__item">
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Kangaroo island escape</a></h5>
+                              <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">2 days Adelaide return</a></p>
+                            </li>
+                          </ul>
+
+                        </div>
+                        <div class="col-md-6">
+                          <ul class="mega-menu__list">
+                            <li class="mega-menu__item">
+
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Red Center Escape</a></h5>
+                              <p class="mega-menu__item-link-title--sub">
+                                <a href="#" class="mega-menu__item-link">3 days Uluru to Alice Springs</a>
+                              </p>
+
+                            </li>
+                            <li class="mega-menu__item">
+
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Sydney escape</a></h5>
+                              <p class="mega-menu__item-link-title--sub">
+                                <a href="#" class="mega-menu__item-link">4 days Sydneys return</a>
+                              </p>
+
+                            </li>
+                            <li class="mega-menu__item">
+
+                              <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">The Long white cloud</a></h5>
+                              <p class="mega-menu__item-link-title--sub">
+                                <a href="#" class="mega-menu__item-link">22 days Christchurch to Auckland</a>
+                              </p>
+
+                            </li>
+                          </ul>
+
+                        </div>
+
+                      </div>
+                    </div>{{!-- /.mega-menu__link-panel-bottom --}}
+
+                  </div>
+                </div>{{!-- /.aussie adventures --}}
+
+                <div class="mega-menu__link-parent">
+                  <div class="mega-menu__link-panel--left">
+                    <p class="mega-menu__toggle mega-menu__title--blue">
+                      <span class="mega-menu__toggle-text">down under tours</span>
+                      <span class="mega-menu__icon mega-menu__icon--dut"></span>
+                    </p>
+                  </div>
+                  <div class="mega-menu__link-panel--right">
+
+                    <div class="mega-menu__link-panel-top">
+
+                      <div class="mega-menu__link-panel-top--left">
+                        <h3 class="mega-menu__link-heading mega-menu__heading--blue">down under tours <span class="mega-menu__icon mega-menu__icon--dut"></span></h3>
+                      </div>
+
+                      <div class="mega-menu__link-panel-top--right">
+                        <p class="no-padding">Aussie Adventures actively explore the great outdoors in a small group of fun and friendly travellers. Aussie Adventures focus on value for money, but we don't skimp on the must-see highlights and excitement of travelling in Australia
+                          with our down-to-earth guides.</p>
+                      </div>
+
+                    </div>{{!-- /.mega-menu__link-panel-top --}}
+
+                    <div class="mega-menu__link-panel-bottom">
+
+                      <div class="mega-menu__row">
+
+                        <div class="col-md-4">
+                          <img class="mega-menu__item-image" src="http://via.placeholder.com/300x250" alt="placeholder image">
+                          <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Guided holidays</a></h5>
+                          <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">4 to 21 days</a></p>
+                        </div>
+                        <div class="col-md-4">
+                          <img class="mega-menu__item-image" src="http://via.placeholder.com/300x250" alt="placeholder image">
+                          <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Day tours</a></h5>
+                          <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">Half day - 1 day</a></p>
+                        </div>
+                        <div class="col-md-4">
+                          <img class="mega-menu__item-image" src="http://via.placeholder.com/300x250" alt="placeholder image">
+                          <h5 class="mega-menu__item-link-title"><a href="#" class="mega-menu__item-link">Short Breaks</a></h5>
+                          <p class="mega-menu__item-link-title--sub"><a href="#" class="mega-menu__item-link">2 to 7 days</a></p>
+                        </div>
+
+                      </div>
+
+                    </div>{{!-- /.mega-menu__link-panel-bottom --}}
+                  </div>
+                </div>{{!-- /.down under tours --}}
+
+              </div>{{!-- /.nav-desktop__mega-menu --}}
+            </li>
+            <li class="nav-desktop__li">
+              <a href="#" class="nav-desktop__link">Destinations Map</a>
+            </li>
+            <li class="nav-desktop__li">
+              <a href="#" class="nav-desktop__link">Brochures</a>
+            </li>
+            <li class="nav-desktop__li">
+              <a href="#" class="nav-desktop__link">Ways to Save</a>
+            </li>
+            <li class="nav-desktop__li nav-desktop__li--dropdown">
+              <a href="#" class="nav-desktop__link">About us <i class="fa fa-caret-down" aria-hidden="true"></i></a>{{!-- About us dropdown container --}}
+              <div class="nav-desktop__sub-menu sub-menu">
+                <div class="sub-menu__row">
+                  <div class="col-md-6">
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">The AAT Kings Difference</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Our History</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">AAT Kings Cares</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">The Travel Corporation</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Awards</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Contact Us</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">FAQ's</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Our People</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Video</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Indigenous Culture</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Groups &amp; Charters</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Careers</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Booking Conditions</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="#" class="sub-menu__link">Our Blog</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>{{!-- /.nav-desktop__dropdown-menu --}}
+            </li>
+          </ul>
+        </nav>
+      </div>{{!-- /.col-md-8 --}}
+
+
+      {{!-- Mobile nav icons contianer --}}
+      <div class="col-xs-7 col-sm-8 visible-xs-inline-block visible-sm-inline-block">
+
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-xs-4">
+              <a href="#" data-target="#" class="header__nav-link--icon link-icon header__nav-link--icon--phone"></a>
+            </div>
+
+            <div class="col-xs-4 no-padding">
+              <a href="#" data-target="#" class="header__nav-link header__nav-link--icon search-toggle header__nav-link--icon--search"></a>
+            </div>
+
+            <div class="col-xs-4 no-padding">
+              <a href="#" class="header__nav-link header__nav-link--icon header__nav-link--icon--menu menu-toggle"></a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>{{!-- /.header__mid --}}

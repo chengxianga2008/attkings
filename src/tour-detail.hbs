@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guided Tours in Australia &amp; New Zealand | AAT Kings - Tour Details</title>
+
+	{{!--
+      webpack compiled script do not edit!
+      To edit go to the pre-compiled file
+      ./src/index.js
+    --}}
+
+	<script src="/templates/bundle.js"></script>
+</head>
+
+<body class="TourDetailPage">
+
+	<header class="header header--white menu-visible-false search-visible-false">
+
+		{{!--
+	      The following are component partials build by webpack and handlebars.
+	      For reference and documentation look here https://github.com/sagold/handlebars-webpack-plugin
+	    --}}
+
+		{{> global/headerTop }}
+
+		{{> global/headerMid }}
+
+		{{> global/headerSearch }}
+
+		{{> global/headerGlobalMobile }}
+
+		{{> global/headerHomeCarousel }}
+
+	</header>
+
+	<main class="main tour-detail">
+
+		<div class="container">
+
+			<div class="row">
+
+				{{> tour-detail/tourLeftCol }}
+
+				{{> tour-detail/tourRightCol }}
+
+			</div>
+
+		</div>
+
+	</main>
+
+	<footer class="footer">
+
+		{{> global/footerTop }}
+
+		{{> global/footerBottom }}
+
+	</footer>
+
+</body>
+</html>

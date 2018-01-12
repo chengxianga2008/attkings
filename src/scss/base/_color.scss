@@ -1,0 +1,66 @@
+$black:       #000;
+$white:       #FFF;
+$red:         #DA1F26;
+$blue:        #165D9D;
+$brown:       #87523D;
+$light-brown: #AC8B73;
+$yellow:      #DF8F1A;
+$orange:      #F36F21;
+$blue-grey:   #6a6e70;
+$title-gray : #bdbdbd;
+$dark-blue:   #4e5356;
+$dark-brown:  #733535;
+$dark-yellow:  #c3a375;
+
+$nav_menu_active: #f9f9f9;
+
+$gray10:      lighten($black, 90%);
+$gray20:      lighten($black, 80%);
+$gray30:      lighten($black, 70%);
+$gray40:      lighten($black, 60%);
+$gray50:      lighten($black, 50%);
+$gray60:      lighten($black, 40%);
+$gray70:      lighten($black, 30%);
+$gray80:      lighten($black, 20%);
+$gray90:      lighten($black, 10%);
+
+
+[class$="--blue"] {
+  color: $blue;
+}
+
+[class$="--red"] {
+  color: $red;
+}
+
+[class$="--brown"] {
+  color: $brown;
+}
+
+[class$="--light-brown"] {
+  color: $light-brown;
+}
+
+[class$="--yellow"] {
+  color: $yellow;
+}
+
+[class$="--orange"] {
+	color: $orange;
+}
+
+[class$="--title-gray"] {
+	color: $title-gray;
+}
+
+[class$="--dark-blue"] {
+	color: $dark-blue;
+}
+
+[class$="--dark-brown"] {
+  color: $dark-brown;
+}
+
+[class$="--dark-yellow"] {
+	color: $dark-yellow;
+}

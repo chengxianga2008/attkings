@@ -1,0 +1,680 @@
+.explore-map {
+  margin: 75px 0 20px;
+  padding: 0 0 50px;
+  background-color: #faf4f1;
+  position: relative;
+
+  &:before {
+    background-image: url("../images/hp_bo_top.png");
+    width: 1920px;
+    height: 137px;
+    display: block;
+    content: "";
+    position: absolute;
+    top: -137px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  &:after {
+    background-image: url("../images/hp_bo_bottom.png");
+    width: 100%;
+    height: 131px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  &__head {
+    padding-bottom: 25px;
+  }
+
+  &__title {
+    &--h2 {
+      font-weight: 300;
+      margin: 0 0 1rem;
+      color: $gray80;
+    }
+
+    &--h3 {
+      font-size: 14px;
+      color: $gray40;
+      font-weight: normal;
+    }
+
+    &--h4 {
+      font-size: 12px;
+      color: $gray30;
+      margin: 4rem 0 0;
+    }
+  }
+
+  &__mobile {
+    &-link {
+      width: 100%;
+      display: block;
+      border: 1px solid $gray10;
+      border-radius: 5px;
+    }
+  }
+  /* Desktop */
+  &__nav-tabs {
+    width: 33rem;
+    margin: 0 auto;
+    border-bottom: 0;
+  }
+
+  &__nav-tab {
+    position: relative;
+
+    &:after {
+      @include transition(all 200ms cubic-bezier(1.000, 1.385, 0.475, 0.930));
+      width: 20%;
+      height: 1px;
+      display: block;
+      content: "";
+      background-color: $gray40;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:after {
+        width: 100%;
+        background-color: $red;
+      }
+    }
+
+    &.active {
+      .explore-map__nav-tab-link,
+      .explore-map__nav-tab-link:focus,
+      .explore-map__nav-tab-link:hover {
+        color: $red;
+        border: 0;
+        background-color: transparent;
+      }
+
+      &:after {
+        width: 95%;
+        background-color: $red;
+      }
+    }
+
+    &-link {
+      font-size: 24px;
+      color: $gray40;
+      font-weight: 700;
+      border: 0 !important;
+      background: none !important;
+
+      &:focus {
+        color: $red;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__calendar {
+    width: 100%;
+    height: 55px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid $brown;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__month {
+    width: calc(100% / 12);
+    height: 20px;
+    position: relative;
+    vertical-align: top;
+    text-align: center;
+
+    &.active {
+      .explore-map__month-link {
+        color: $light-brown;
+        transform: translateY(-1rem);
+      }
+    }
+
+    &-link {
+      @include transition(all 200ms cubic-bezier(1.000, 1.385, 0.475, 0.930));
+      width: 100%;
+      display: block;
+
+      &:hover {
+        .explore-map__month-name {
+          color: $light-brown;
+          transform: translateY(-1rem);
+        }
+      }
+    }
+
+    &-name {
+      @include transition(all 200ms cubic-bezier(1.000, 1.385, 0.475, 0.930));
+      font-size: 16px;
+      display: block;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &-icon {
+      font-size: 20px;
+      color: $dark-yellow;
+      margin-top: -2px;
+    }
+  }
+
+  &__tab-pane {
+    position: relative;
+  }
+
+  &__points {
+    width: 500px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__point {
+    &-label {
+      background-color: $white;
+      padding: 0.25rem 1rem;
+      margin-left: 25px;
+      white-space: nowrap;
+      position: absolute;
+      box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.3);
+      top: -4px;
+
+      &:before {
+        width: 0;
+        height: 0;
+        content: "";
+        display: block;
+        border-top: 12px solid transparent;
+        border-right: 10px solid $white;
+        border-bottom: 12px solid transparent;
+        position: absolute;
+        left: -10px;
+        top: 0;
+      }
+    }
+
+    &--left {
+      .explore-map__point-label {
+        margin-left: 0;
+        left: auto;
+        right: 15px;
+
+        &:before {
+          display: none;
+        }
+
+        &:after {
+          width: 0;
+          height: 0;
+          content: "";
+          display: block;
+          border-top: 12px solid transparent;
+          border-left: 10px solid $white;
+          border-bottom: 12px solid transparent;
+          position: absolute;
+          right: -10px;
+          top: 0;
+        }
+      }
+    }
+
+    &-au,
+    &-nz {
+      @include transition(all 200ms cubic-bezier(1.000, 1.385, 0.475, 0.930));
+      display: none;
+      opacity: 0;
+      width: 0;
+      height: 20px;
+      position: absolute;
+      left: -18px;
+      bottom: -14px;
+
+      .hover-image {
+        @include transition(all 200ms cubic-bezier(1.000, 1.385, 0.475, 0.930));
+        position: absolute;
+        left: -16px;
+        bottom: -13px;
+        opacity: 0;
+      }
+
+      &:after {
+        //width: 12px;
+        //height: 12px;
+        display: block;
+        content: "\f111";
+        color: $red;
+        //border-radius: 100%;
+        //position: absolute;
+        left: 0;
+        top: 0;
+        font-family: FontAwesome;
+      }
+
+      &:hover {
+        .hover-image {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-au {
+      &--palm-valley-2 {
+        top: 150px;
+        left: 280px;
+
+        &:hover {}
+      }
+
+      &--alice-springs-town {
+        top: 180px;
+        left: 260px;
+      }
+
+      &--west-macdonnell-ranges {
+        top: 155px;
+        left: 114px;
+      }
+
+      &--valley-of-the-winds {
+        top: 199px;
+        left: 250px;
+      }
+
+      &--walpa-gorge {
+        top: 203px;
+        left: 100px;
+      }
+
+      &--kings-canyon {
+        top: 184px;
+        left: 119px;
+      }
+
+      &--kata-tjuta-the-olgas {
+        top: 223px;
+        left: 119px;
+      }
+
+      &--hunter-valley-wineries {
+        top: 260px;
+        left: 450px;
+      }
+
+      &--parliament-house {
+        top: 343px;
+        left: 340px;
+      }
+
+      &--sydney-harbour-bridge {
+        top: 275px;
+        left: 470px;
+      }
+
+      &--sydney-opera-house {
+        top: 315px;
+        left: 454px;
+      }
+
+      &--bondi-beach {
+        top: 343px;
+        left: 437px;
+      }
+
+      &--margaret-river-wineries {
+        top: 321px;
+        left: 54px;
+      }
+
+      &--uluru-ayers-rock {
+        top: 218px;
+        left: 236px;
+      }
+
+      &--75-mile-beach {
+        top: 170px;
+        left: 442px;
+      }
+
+      &--port-douglas {
+        top: 118px;
+        left: 392px;
+      }
+
+      &--cape-tribulation {
+        top: 89px;
+        left: 388px;
+      }
+
+      &--three-sisters {
+        top: 189px;
+        left: 296px;
+      }
+
+      &--barossa-wineries {
+        top: 322px;
+        left: 313px;
+      }
+    }
+
+    &-nz {
+      &--bay-of-islands {
+        top: 68px;
+        left: 286px;
+      }
+
+      &--coromandel {
+        top: 110px;
+        left: 313px;
+      }
+
+      &--waitomo-caves {
+        top: 150px;
+        left: 306px;
+      }
+
+      &--lake-taupo {
+        top: 176px;
+        left: 320px;
+      }
+
+      &--napier {
+        top: 190px;
+        left: 346px;
+      }
+
+      &--nelson {
+        top: 239px;
+        left: 264px;
+      }
+
+      &--marlborough {
+        top: 232px;
+        left: 278px;
+      }
+
+      &--kaikoura {
+        top: 281px;
+        left: 270px;
+      }
+
+      &--punakaiki {
+        top: 273px;
+        left: 217px;
+      }
+
+      &--franz-josef-glacier {
+        top: 310px;
+        left: 191px;
+      }
+
+      &--lake-tekapo {
+        top: 331px;
+        left: 198px;
+      }
+
+      &--southern-alps {
+        top: 312px;
+        left: 212px;
+      }
+
+      &--mt-cook-national-park {
+        top: 333px;
+        left: 193px;
+      }
+
+      &--queenstown {
+        top: 355px;
+        left: 159px;
+      }
+
+      &--milford-sound {
+        top: 339px;
+        left: 142px;
+      }
+
+      &--fiordland-national-park {
+        top: 386px;
+        left: 117px;
+      }
+    }
+  }
+
+  &__tab-content {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    &[data-month="jan"] {
+      .explore-map__point-au {
+        &--barossa-wineries,
+        &--hunter-valley-wineries,
+        &--margaret-river-wineries,
+        &--uluru-ayers-rock {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park,
+        &--franz-josef-glacier,
+        &--milford-sound {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .Jan
+    &[data-month="feb"] {
+      .explore-map__point-au {
+        &--alice-springs-town,
+        &--palm-valley-2,
+        &--west-macdonnell-ranges {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--bay-of-islands,
+        &--coromandel,
+        &--waitomo-caves {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .feb
+    &[data-month="mar"] {
+      .explore-map__point-au {
+        &--margaret-river-wineries {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .mar
+    &[data-month="apr"] {
+      .explore-map__point-au {
+        &--margaret-river-wineries {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .apr
+    &[data-month="may"] {
+      .explore-map__point-au {
+        &--75-mile-beach,
+        &--alice-springs-town,
+        &--blue-mountains,
+        &--cape-tribulation,
+        &--palm-vally-2,
+        &--phillip-,
+        &--port-douglas,
+        &--sydney-harbour-bridge,
+        &--uluru-ayers-rock {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .may
+    &[data-month="jun"] {
+      .explore-map__point-au {
+        &--margaret-river-wineries {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .jun
+    &[data-month="jul"] {
+      .explore-map__point-au {
+        &--margaret-river-wineries {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .jul
+    &[data-month="aug"] {
+      .explore-map__point-au {
+        &--margaret-river-wineries {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .aug
+    &[data-month="sep"] {
+      .explore-map__point-au {
+        &--margaret-river-wineries {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .sep
+    &[data-month="oct"] {
+      .explore-map__point-au {
+        &--margaret-river-wineries {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .oct
+    &[data-month="nov"] {
+      .explore-map__point-au {
+        &--margaret-river-wineries {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .nov
+    &[data-month="dec"] {
+      .explore-map__point-au {
+        &--margaret-river-wineries {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .explore-map__point-nz {
+        &--fiordland-national-park {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+    // .dec
+  }
+}
