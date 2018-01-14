@@ -4,26 +4,29 @@ const path = require('path');
 
 const HandlebarsPlugin = require("handlebars-webpack-plugin");
 const KssWebpackPlugin = require('kss-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-var KssConfig = {
-  source: './src/scss/',
-  destination: './styleguide',
-  js: '../templates/bundle.js',
-};
+//var KssConfig = {
+//  source: './src/scss/',
+//  destination: './styleguide',
+//  js: '../templates/bundle.js',
+//};
 
 module.exports = {
-  devtool: 'source-maps',
+//  devtool: 'source-maps',
   entry: ['./src/index.js'],
   output: {
-    filename: 'templates/bundle.js'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
-  watch: true,
-  devServer: {
-    port: process.env.PORT || 8080,
-    historyApiFallback: true,
-    inline: true,
-    host: "0.0.0.0"
-  },
+//  watch: true,
+//  devServer: {
+//    port: process.env.PORT || 8080,
+//    historyApiFallback: true,
+//    inline: true,
+//    host: "0.0.0.0"
+//  },
   devtool: 'source-map',
   module: {
     loaders: [
@@ -34,30 +37,17 @@ module.exports = {
       },
       {
         test: /\.(sass|scss)$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true
-            }
-          }
-        ]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        }) 
       },
       {
         test: /\.(jpg|jpeg|png|gif)$/,
         use: {
           loader: 'file-loader',
           options: {
-            name: '../src/images/[name].[ext]'
+            name: 'src/images/[name].[ext]'
           }
         }
       },
@@ -87,13 +77,13 @@ module.exports = {
         $: 'jquery',
         jquery: 'jquery'
     }),
-    new KssWebpackPlugin(KssConfig),
+//  new KssWebpackPlugin(KssConfig),
     new HandlebarsPlugin({
       // path to hbs entry file(s)
       entry: path.join(process.cwd(), "src", "*.hbs"),
       // output path and filename(s)
       // if ommited, the input filepath stripped of its extension will be used
-      output: path.join(process.cwd(), "templates", "[name].html"),
+      output: path.join(process.cwd(), "dist", "[name].html"),
       // data passed to main hbs template: `main-template(data)`
       //data: require("./app/data/project.json"),
       // or add it as filepath to rebuild data on change using webpack-dev-server
@@ -118,6 +108,11 @@ module.exports = {
       // onBeforeRender: function (Handlebars, data) {},
       // onBeforeSave: function (Handlebars, resultHtml, filename) {},
       // onDone: function (Handlebars, filename) {}
-  })
+  }),
+  new ExtractTextPlugin("styles.css"),
+  new CopyWebpackPlugin([
+            // {output}/file.txt
+            { from: 'src/images' , to: 'src/images'},
+  ]),
   ]
 };
